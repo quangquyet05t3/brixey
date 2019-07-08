@@ -1,0 +1,127 @@
+/* Brxy CSS Document */
+/* Brxy Dark Version CSS */
+.dark-version {
+  background: #1e1e1e;
+  color: #999999;
+}
+.dark-version input[type="text"], .dark-version input[type="email"], .dark-version input[type="password"], .dark-version input[type="tel"], .dark-version input[type="search"], .dark-version input[type="date"], .dark-version input[type="time"], .dark-version input[type="datetime-local"], .dark-version input[type="month"], .dark-version input[type="url"], .dark-version input[type="number"], .dark-version textarea, .dark-version select, .dark-version .form-control {
+  color: #ffffff;
+  border-color: #333333;
+}
+.dark-version pre {
+  background: #191919;
+  color: #999;
+  border-color: #333333;
+}
+.dark-version p, .dark-version a, .dark-version .post-title, .dark-version .post-title a, .dark-version .brxy-unit-fix .brxy-blog-detail ul, .dark-version .brxy-unit-fix .brxy-blog-detail ol, .dark-version .brxy-unit-fix .brxy-bottom-meta .brxy-tags li a:hover, .dark-version .brxy-unit-fix .brxy-bottom-meta .brxy-share p, .dark-version form label {
+  color: #999;
+}
+.dark-version a:hover, .dark-version a:focus, .dark-version p a:hover, .dark-version .project-info .project-category a:hover, .dark-version .mate-info .mate-name a:hover, .dark-version .brxy-staffs .mate-info .mate-name a:hover, .dark-version .award-item p a:hover, .dark-version .contact-link a:hover, .dark-version .next-service a:hover, .dark-version .post-date a:hover, .dark-version .contact-list a:hover, .dark-version .location-list ul li a:hover, .dark-version .brxy-service-detail h6, .dark-version .brxy-service-detail dl dt, .dark-version .brxy-service-detail dl dd span {
+  color: #a0a0a0;
+}
+.dark-version .brxy-btn, .dark-version input[type="submit"] {
+  background-color: #ffffff;
+  color: #1e1e1e;
+}
+.dark-version .brxy-btn:hover, .dark-version .brxy-btn:focus, .dark-version input[type="submit"]:hover, .dark-version input[type="submit"]:focus {
+  background-color: #f6f6f6;
+  color: #1e1e1e;
+}
+.dark-version .brxy-header {
+  background: #1e1e1e;
+  border-color: #2e2e2e;
+}
+.dark-version .brxy-header .black-logo {
+  display: none;
+}
+.dark-version .brxy-header .white-logo {
+  display: block;
+}
+.dark-version .brxy-header .white-logo.retina-logo {
+  display: none;
+}
+.dark-version .brxy-toggle .toggle-separator, .dark-version .brxy-toggle .toggle-separator:before, .dark-version .brxy-toggle .toggle-separator:after {
+  background: #ffffff;
+}
+.dark-version .service-item i, .dark-version .service-item .service-title, .dark-version .project-info .project-title, .dark-version .project-info .project-title a, .dark-version .brxy-project-detail .project-title{
+  color: #999999;
+}
+.dark-version .brxy-menu > li > a, .dark-version .brxy-logo a, .dark-version .brxy-title-wrap .section-title, .dark-version .brxy-404-error .error-sub-title, .dark-version .brxy-title-1, .dark-version .brxy-progressbar, .dark-version .award-info .award-year, .dark-version .brxy-read-more a, .dark-version .brxy-unit-fix .brxy-bottom-meta .brxy-share a, .dark-version .location-list ul li span, .dark-version .filter-buttons .brxy-menu > li > a.active, .dark-version .filter-buttons > .nav-tabs.brxy-menu > li.active > a, .dark-version .plan-title-wrap .plan-title, .dark-version .project-controls a {
+  color: #999999;
+  background: #1e1e1e;
+}
+.dark-version .brxy-title-wrap .section-title:after, .dark-version .progress, .dark-version .award-info .award-year:after, .dark-version .brxy-info-title.style2 .info-sub-title:after, .dark-version .brxy-read-more a:before, .dark-version .filter-buttons .brxy-menu > li > a:before, .dark-version .next-service:before, .dark-version .service-info .service-title:after, .dark-version .brxy-project-detail .project-title:after, .dark-version .project-controls .grid-links span, .dark-version .project-controls .grid-links span:before, .dark-version .project-controls .grid-links span:after {
+  background: #999999;
+}
+.dark-version .brxy-404-error{
+  background: #1e1e1e;
+}
+.dark-version .service-item, .dark-version .brxy-request-quote {
+  background: #252525;
+}
+.dark-version .brxy-status {
+  background: #191919;
+}
+.dark-version .project-listings .brxy-btn {
+  background-color: #ffffff;
+}
+.dark-version .project-listings .brxy-btn:hover, .dark-version .project-listings .brxy-btn:focus {
+  background-color: #f6f6f6;
+}
+.dark-version .mate-info .mate-name, .dark-version .mate-info .mate-name a, .dark-version .brxy-404-error .error-title, .dark-version .brxy-info-title .info-title, .dark-version .brxy-staffs .staff-type, .dark-version .brxy-staffs .mate-info .mate-name, .dark-version .brxy-staffs .mate-info .mate-name a, .dark-version .brxy-request-quote .request-quote-title, .dark-version .contact-list h6, .dark-version .location-list .location-title {
+  color: #ffffff;
+}
+.dark-version .client-item, .dark-version .brxy-staffs, .dark-version .brxy-load-more, .dark-version .brxy-request-quote, .dark-version .brxy-unit-fix .brxy-more-posts, .dark-version .brxy-unit-fix .brxy-bottom-meta, .dark-version .brxy-unit-fix .brxy-comments-area .comment-main-area, .dark-version .brxy-unit-fix .brxy-comment-form .brxy-form-inputs > input:last-child, .dark-version table, .dark-version table > tbody > tr > td, .dark-version table > tbody > tr > th, .dark-version table > tfoot > tr > td, .dark-version table > tfoot > tr > th, .dark-version table > thead > tr > td, .dark-version table > thead > tr > th, .dark-version .brxy-unit-fix .entry-content .comment-list article, .dark-version .brxy-unit-fix .entry-content .comment-list .pingback, .dark-version .brxy-unit-fix .entry-content .comment-list .trackback, .dark-version .filter-buttons .tab-content, .dark-version .brxy-project-detail .detail-wrap li, .dark-version .project-controls, .dark-version .project-controls .grid-links, .dark-version .brxy-project-detail .project-controls {
+  border-color: #333333;
+}
+.dark-version .brxy-clients .owl-drag .owl-prev:before, .dark-version .brxy-clients .owl-drag .owl-next:before {
+  background: #1e1e1e;
+  color: #999;
+  border-color: #333333;
+}
+.dark-version .brxy-footer, .dark-version .brxy-unit-fix .brxy-bottom-meta .brxy-likes span:before, .dark-version .brxy-unit-fix .brxy-author, .dark-version .project-listings.style6 .project-info:before, .dark-version .brxy-sinlge-detail .brxy-project-detail {
+  background: #191919;
+}
+.dark-version .brxy-secondary-footer {
+  background: #1e1e1e;
+  color: #999;
+  border-color: #2e2e2e;
+}
+.dark-version .mCSB_scrollTools .mCSB_draggerRail {
+  background: rgba(255, 255, 255, 0.1);
+}
+.dark-version .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background: rgba(255, 255, 255, 0.8) !important;
+}
+.dark-version .brxy-unit-fix .brxy-bottom-meta .brxy-likes span {
+  color: #999999;
+  border-color: #999999;
+}
+.dark-version .page-links a, .dark-version .page-links > span {
+  border-color: #333333;
+}
+.dark-version .page-links a:hover, .dark-version .page-links a:focus, .dark-version .brxy-unit-fix .entry-content .comment-list .comment-reply-link {
+  color: #999;
+  border-color: #333333;
+}
+.dark-version .brxy-unit-fix .entry-content .comment-list .comment-reply-link:hover, .dark-version .brxy-unit-fix .entry-content .comment-list .comment-reply-link:focus {
+  color: #a0a0a0;
+  border-color: #a0a0a0;
+}
+.dark-version .brxy-sidebar:before {
+  background: #333333;
+}
+.dark-version .default-bullets li:before, .brxy-service-detail .tab-content ul li:before {
+  background: #a0a0a0;
+}
+.dark-version .service-picture img, .dark-version .brxy-services.style2 .service-item:nth-child(2n) .service-picture img {
+  border-color: #1e1e1e;
+}
+.quote-wrap a:hover, .quote-wrap a:focus {
+  color: #ffffff;
+}
+
+
+/*Typo Improvements*/
+.dark-version .brxy-heading-wrap .brxy-sub-heading a { color: #fff; }
+.dark-version .brxy-info-btn a { color: #999999; }
