@@ -7,15 +7,6 @@
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/video.css" >
 
 <style type="text/css">
-    .video-content {
-        margin-bottom: 0px;
-        background: url("<?php echo get_template_directory_uri(); ?>/img/optin-bar-bg.png")  center center no-repeat;
-        background-size: cover;
-        color: #f1f1f1;
-        width: auto !important;
-        padding: 50px 0px 20px;
-        height: 250px;
-    }
 
     /* Home one */
     #home-one {
@@ -42,6 +33,8 @@
         background: #aa2b2b;
         width: 46px;
         height: 46px;
+        padding-top: 18px;
+        padding-left: 10px;
     }
     .read-more-button button.btn {
         background: #000;
@@ -57,6 +50,16 @@
         background: #fff;
         color: #000;
     }
+    .arrow {
+        background: url('<?php echo get_template_directory_uri(); ?>/img/arrow.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        height: 12px;
+        width: 30px;
+    }
+
+
 
     .home-content h3 {
         font-size: 50px;
@@ -140,7 +143,7 @@
         <div class="col-md-12 video-top">
             
         </div>
-        <div class="col-md-12 video-content">
+        <div class="col-md-12 video-content" style="background: url('<?php echo get_template_directory_uri(); ?>/img/optin-bar-bg.png")  center center no-repeat;'>
             <div class="container">
                 <div class="row">
                     <div class="video-content-image">
@@ -213,7 +216,8 @@
                         <div class="container">
                             <div class="row">
                                 <div class="read-more-arrow">
-
+                                    <div class="arrow icon">
+                                    </div>
                                 </div>
                                 <div class="read-more-button">
                                     <button type="button" class="btn">Đọc thêm</button>

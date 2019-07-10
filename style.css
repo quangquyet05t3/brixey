@@ -153,6 +153,14 @@ img {
 }
 
 /* Add some content at the bottom of the video/page */
+.video-content {
+	margin-bottom: 0px;
+	background-size: cover;
+	color: #f1f1f1;
+	width: auto !important;
+	padding: 50px 0px 20px;
+	height: 250px;
+}
 
 .video-content-text{
 	text-align: center;
