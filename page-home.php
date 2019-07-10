@@ -4,54 +4,95 @@
 <!-- Custom CSS -->
 <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/style.css" >
 
-<!-- The video -->
+<!--Section Nav-->
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse" id="nav-main">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">
+        <img src="/wp-content/uploads/2019/05/peng-joon-logo-copy-copy-e1559135091999.png">
+    </a>
 
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item li-border active">
+                <a class="nav-link" href="#">Trang chủ <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item li-border">
+                <a class="nav-link" href="#">Dự án</a>
+            </li>
+            <li class="nav-item li-border">
+                <a class="nav-link" href="#">Dịch vụ</a>
+            </li>
+            <li class="nav-item li-border">
+                <a class="nav-link" href="#">Tin tức</a>
+            </li>
+            <li class="nav-item li-border">
+                <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item li-border">
+                <a class="nav-link" href="#">Giới thiệu</a>
+            </li>
+            <li class="nav-item li-border">
+                <a class="nav-link" href="#">Liên hệ</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Tìm kiếm">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
+        </form>
+    </div>
+</nav>
+
+<!-- The video -->
 <?php
     $videoUrl = get_template_directory_uri().'/video/home.mp4';
 ?>
-<video autoplay muted loop id="myVideo">
-    <source src="<?php echo $videoUrl; ?>" type="video/mp4">
-</video>
+<section id="video">
+    <video autoplay muted loop id="myVideo">
+        <source src="<?php echo $videoUrl; ?>" type="video/mp4">
+    </video>
 
-<div class="content">
-    <div class="container">
-        <div class="row">
-            <div class="video-content-image">
-                <img src="/wp-content/uploads/2019/05/hinhdaidien-copy-e1559142553844.png" />
-            </div>
-            <div class="row video-content">
-                <div class="col-md-12">
-                    <div class="video-content-text">
-                        <h3>ĐỪNG MỞ QUÁN NẾU CHƯA BIẾT QUY TRÌNH SETUP</h3>
-                        <h5>Nhận quy trình SETUP COFFEE từ A-Z</h5>
-                    </div>
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="video-content-image">
+                    <img src="/wp-content/uploads/2019/05/hinhdaidien-copy-e1559142553844.png" />
+                </div>
+                <div class="row video-content">
+                    <div class="col-md-12">
+                        <div class="video-content-text">
+                            <h3>ĐỪNG MỞ QUÁN NẾU CHƯA BIẾT QUY TRÌNH SETUP</h3>
+                            <h5>Nhận quy trình SETUP COFFEE từ A-Z</h5>
+                        </div>
 
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="form-group row">
-                                <div class="col-12">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group row">
+                                    <div class="col-12">
                                         <input class="form-control" type="text" placeholder="Họ tên" id="full_name">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-group row">
-                                <div class="col-12">
-                                    <input class="form-control" type="text" placeholder="Số điện thoại"  id="phone">
+                            <div class="col-md-3">
+                                <div class="form-group row">
+                                    <div class="col-12">
+                                        <input class="form-control" type="text" placeholder="Số điện thoại"  id="phone">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-group row">
-                                <div class="col-12">
-                                    <input class="form-control" type="text" placeholder="Email" id="email">
+                            <div class="col-md-3">
+                                <div class="form-group row">
+                                    <div class="col-12">
+                                        <input class="form-control" type="text" placeholder="Email" id="email">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-group row">
-                                <div class="col-12">
-                                    <button type="submit" class="btn btn-primary">Nhận ngay</button>
+                            <div class="col-md-3">
+                                <div class="form-group row">
+                                    <div class="col-12">
+                                        <button type="button" class="btn btn-outline-success">Nhận ngay</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -59,26 +100,10 @@
                 </div>
             </div>
         </div>
+        <!-- Use a button to pause/play the video with JavaScript -->
+        <!--<button id="myBtn" onclick="myFunction()">Pause</button>-->
     </div>
-    <!-- Use a button to pause/play the video with JavaScript -->
-    <!--<button id="myBtn" onclick="myFunction()">Pause</button>-->
-</div>
-
-
-
-    <!--<div class="row">
-        <div class="col-md-8">
-            .col-md-8
-            <div class="row">
-                <div class="col-md-6">.col-md-6</div>
-                <div class="col-md-6">.col-md-6</div>
-            </div>
-        </div>
-        <div class="col-md-4">.col-md-4</div>
-    </div>-->
-
-
-
+</section>
 
 
 

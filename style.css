@@ -147,6 +147,7 @@ img {
 /* Style the video: 100% width and height to cover the entire window */
 #myVideo {
 	position: fixed;
+	top: 56px;
 	right: 0;
 	bottom: 0;
 	min-width: 100%;
@@ -172,6 +173,17 @@ img {
 	text-align: center;
 }
 
+.video-content-text h3,h5 {
+	color: #ffffff;
+	font-family: "Times New Roman";
+	text-transform: uppercase;
+}
+
+.video-content-text h3 {
+	color: #e3a724;
+	font-weight: bold;
+}
+
 .video-content-image {
 	margin-right: 20px;
 }
@@ -190,4 +202,21 @@ img {
 #myBtn:hover {
 	background: #ddd;
 	color: black;
+}
+
+.li-border {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.li-border:hover{
+	border: #f7d373 solid 1px;
+}
+
+.active {
+	border: #f7d373 solid 1px;
+}
+
+#what-we-do {
+	margin-top: 500px;
+	bottom: 0;
 }
