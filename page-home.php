@@ -4,14 +4,15 @@
 <!-- Custom CSS -->
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" >
 
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/video.css" >
+
 <style type="text/css">
-    .content {
-        position: fixed;
-        bottom: 0;
+    .video-content {
+        margin-bottom: 0px;
         background: url("<?php echo get_template_directory_uri(); ?>/img/optin-bar-bg.png")  center center no-repeat;
         background-size: cover;
         color: #f1f1f1;
-        width: 100%;
+        width: auto !important;
         padding: 50px 0px 20px;
         height: 250px;
     }
@@ -70,54 +71,62 @@
     </div>
 </nav>
 
+
+
 <!-- The video -->
 <?php
     $videoUrl = get_template_directory_uri().'/video/home.mp4';
 ?>
-<section id="video">
-    <video autoplay muted loop id="myVideo">
+
+<header>
+    <div class="overlay"></div>
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
         <source src="<?php echo $videoUrl; ?>" type="video/mp4">
     </video>
+    <div class="row">
+        <div class="col-md-12 video-top">
+            1111
+        </div>
+        <div class="col-md-12 video-content">
+            <div class="container">
+                <div class="row">
+                    <div class="video-content-image">
+                        <img src="/wp-content/uploads/2019/05/hinhdaidien-copy-e1559142553844.png" />
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 video-content-block">
+                            <div class="video-content-text">
+                                <h3>ĐỪNG MỞ QUÁN NẾU CHƯA BIẾT QUY TRÌNH SETUP</h3>
+                                <h5>Nhận quy trình SETUP COFFEE từ A-Z</h5>
+                            </div>
 
-    <div class="content">
-        <div class="container">
-            <div class="row">
-                <div class="video-content-image">
-                    <img src="/wp-content/uploads/2019/05/hinhdaidien-copy-e1559142553844.png" />
-                </div>
-                <div class="row video-content">
-                    <div class="col-md-12">
-                        <div class="video-content-text">
-                            <h3>ĐỪNG MỞ QUÁN NẾU CHƯA BIẾT QUY TRÌNH SETUP</h3>
-                            <h5>Nhận quy trình SETUP COFFEE từ A-Z</h5>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="form-group row">
-                                    <div class="col-12">
-                                        <input class="form-control" type="text" placeholder="Họ tên" id="full_name">
+                            <div class="row">
+                                <div class="col-md-3 p-1">
+                                    <div class="form-group row">
+                                        <div class="col-12">
+                                            <input class="form-control" type="text" placeholder="Họ tên" id="full_name">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-group row">
-                                    <div class="col-12">
-                                        <input class="form-control" type="text" placeholder="Số điện thoại"  id="phone">
+                                <div class="col-md-3 p-1">
+                                    <div class="form-group row">
+                                        <div class="col-12">
+                                            <input class="form-control" type="text" placeholder="Số điện thoại"  id="phone">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-group row">
-                                    <div class="col-12">
-                                        <input class="form-control" type="text" placeholder="Email" id="email">
+                                <div class="col-md-3 p-1">
+                                    <div class="form-group row">
+                                        <div class="col-12">
+                                            <input class="form-control" type="text" placeholder="Email" id="email">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-group row">
-                                    <div class="col-12">
-                                        <button type="button" class="btn btn-outline-success">Nhận ngay</button>
+                                <div class="col-md-3 p-1">
+                                    <div class="form-group row">
+                                        <div class="col-12">
+                                            <button type="button" class="btn btn-danger">Nhận ngay</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -126,14 +135,32 @@
                 </div>
             </div>
         </div>
-        <!-- Use a button to pause/play the video with JavaScript -->
-        <!--<button id="myBtn" onclick="myFunction()">Pause</button>-->
+    </div>
+</header>
+
+<section id="about">
+    <div class="section-content">
+        <div class="container">
+            <div class="col-md-6">
+                <div class="about-text">
+                    <h3>About me</h3>
+                    <p class="lead">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima culpa nostrum voluptates praesentium quia, quae, dolor aperiam possimus architecto, tempore unde! Quasi fugit voluptate, maiores adipisci commodi nemo rem cumque.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error eum mollitia sit dolorem autem qui possimus ex voluptate, voluptatibus iste unde numquam illum, molestiae reprehenderit, eligendi. Illum quod esse voluptatibus.
+                    </p>
+
+                    <h5>Follow me on the web</h5>
+                    <a href="" class="btn btn-sm btn-outline-secondary">twiter</a>
+                    <a href="" class="btn btn-sm btn-outline-secondary">facebook</a>
+                    <a href="" class="btn btn-sm btn-outline-secondary">youtube</a>
+                </div>
+            </div>
+
+        </div>
     </div>
 </section>
-
-
-
-
 
 <!--Script to get the video-->
 <script>

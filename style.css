@@ -146,8 +146,6 @@ img {
 /* =======================Video======================*/
 /* Style the video: 100% width and height to cover the entire window */
 #myVideo {
-	position: fixed;
-	top: 56px;
 	right: 0;
 	bottom: 0;
 	min-width: 100%;
@@ -156,12 +154,20 @@ img {
 
 /* Add some content at the bottom of the video/page */
 
-.video-content {
+.video-content-text{
+	text-align: center;
+}
+
+.video-content-block {
 	width: 930px;
 }
 
-.video-content-text{
-	text-align: center;
+.video-content-text h3,h5 {
+	color: #ffffff;
+
+}
+.video-content-image {
+	margin-right: 20px;
 }
 
 .video-content-text h3,h5 {
@@ -175,25 +181,18 @@ img {
 	text-transform: uppercase;
 }
 
-.video-content-image {
-	margin-right: 20px;
+.form-control , .btn-danger{
+	border-radius: 0;
 }
 
-/* Style the button used to pause/play the video */
-#myBtn {
-	width: 200px;
-	font-size: 18px;
-	padding: 10px;
-	border: none;
-	background: #000;
-	color: #fff;
-	cursor: pointer;
+.btn-danger {
+	width: 100%;
+	background: #a61717;
+	color: #ffffff;
+	text-transform: uppercase;
 }
 
-#myBtn:hover {
-	background: #ddd;
-	color: black;
-}
+
 
 .navbar {
 	background: #090601 !important;
@@ -223,4 +222,8 @@ img {
 #what-we-do {
 	margin-top: 500px;
 	bottom: 0;
+}
+
+.video-top {
+	height: 470px;
 }
