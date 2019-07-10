@@ -2,7 +2,20 @@
 <!-- Bootstrap CSS -->
 <link href="<?php echo get_template_directory_uri() ?>/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 <!-- Custom CSS -->
-<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/style.css" >
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" >
+
+<style type="text/css">
+    .content {
+        position: fixed;
+        bottom: 0;
+        background: url("<?php echo get_template_directory_uri(); ?>/img/optin-bar-bg.png")  center center no-repeat;
+        background-size: cover;
+        color: #f1f1f1;
+        width: 100%;
+        padding: 50px 0px 20px;
+        height: 250px;
+    }
+</style>
 
 <!--Section Nav-->
 <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse" id="nav-main">
@@ -15,32 +28,45 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item li-border active">
+            <li class="nav-item active">
                 <a class="nav-link" href="#">Trang chủ <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item li-border">
+            <li class="nav-item">
                 <a class="nav-link" href="#">Dự án</a>
             </li>
-            <li class="nav-item li-border">
+            <li class="nav-item">
                 <a class="nav-link" href="#">Dịch vụ</a>
             </li>
-            <li class="nav-item li-border">
+            <li class="nav-item">
                 <a class="nav-link" href="#">Tin tức</a>
             </li>
-            <li class="nav-item li-border">
+            <li class="nav-item">
                 <a class="nav-link" href="#">Blog</a>
             </li>
-            <li class="nav-item li-border">
+            <li class="nav-item">
                 <a class="nav-link" href="#">Giới thiệu</a>
             </li>
-            <li class="nav-item li-border">
+            <li class="nav-item">
                 <a class="nav-link" href="#">Liên hệ</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Tìm kiếm">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
-        </form>
+        <ul class="navbar-nav mr-auto">
+            <li>
+                <a class="nav-link" href="/facebook">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/fb-icon-sm.png" />
+                </a>
+            </li>
+            <li>
+                <a class="nav-link" href="/instagram">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/instagram-icon-sm.png" />
+                </a>
+            </li>
+            <li>
+                <a class="nav-link" href="/youtube">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/youtube-icon-sm.png" />
+                </a>
+            </li>
+        </ul>
     </div>
 </nav>
 

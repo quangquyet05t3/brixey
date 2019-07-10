@@ -155,15 +155,6 @@ img {
 }
 
 /* Add some content at the bottom of the video/page */
-.content {
-	position: fixed;
-	bottom: 0;
-	background: rgba(0, 0, 0, 0.5);
-	color: #f1f1f1;
-	width: 100%;
-	padding: 50px 0px 20px;
-	height: 250px;
-}
 
 .video-content {
 	width: 930px;
@@ -175,13 +166,13 @@ img {
 
 .video-content-text h3,h5 {
 	color: #ffffff;
-	font-family: "Times New Roman";
-	text-transform: uppercase;
+
 }
 
 .video-content-text h3 {
 	color: #e3a724;
 	font-weight: bold;
+	text-transform: uppercase;
 }
 
 .video-content-image {
@@ -204,11 +195,24 @@ img {
 	color: black;
 }
 
-.li-border {
+.navbar {
+	background: #090601 !important;
+}
+
+.nav-item {
 	padding-left: 10px;
 	padding-right: 10px;
+	height: 36px;
+	margin-right: 3px;
 }
-.li-border:hover{
+
+.nav-link {
+	color: #ffffff !important;
+	height: 34px;
+	padding-top: 5px;
+}
+
+.nav-item:hover{
 	border: #f7d373 solid 1px;
 }
 
