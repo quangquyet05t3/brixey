@@ -16,6 +16,59 @@
         padding: 50px 0px 20px;
         height: 250px;
     }
+
+    /* Home one */
+    #home-one {
+        background: url('<?php echo get_template_directory_uri(); ?>/img/feature-one-bg.jpg') center center no-repeat;
+        background-size: cover;
+        color: white;
+        height: 100%;
+        width: 100%;
+    }
+
+    #home-one .home-content {
+        padding-top: 60px;
+    }
+
+    /* Read more */
+    .read-more {
+        height: 46px;
+        max-width: 200px;
+    }
+    .read-more-button {
+        border: #aa2b2b solid 2px;
+    }
+    .read-more-arrow {
+        background: #aa2b2b;
+        width: 46px;
+        height: 46px;
+    }
+    .read-more-button button.btn {
+        background: #000;
+        color: #ffffff;
+        text-transform: uppercase;
+        height: 42px;
+        border-radius: 0;
+    }
+    .read-more-button button.btn:focus {
+        outline: none;
+    }
+    .read-more-button button.btn:hover {
+        background: #fff;
+        color: #000;
+    }
+
+    .home-content h3 {
+        font-size: 50px;
+    }
+
+    .home-content h3,h5,p {
+        padding-bottom: 20px;
+    }
+
+
+
+
 </style>
 
 <!--Section Nav-->
@@ -138,26 +191,41 @@
     </div>
 </header>
 
-<section id="about">
-    <div class="section-content">
+
+<!--Meet Peng Joon-->
+<section id="home-one">
+    <div class="home-content">
         <div class="container">
-            <div class="col-md-6">
-                <div class="about-text">
-                    <h3>About me</h3>
-                    <p class="lead">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima culpa nostrum voluptates praesentium quia, quae, dolor aperiam possimus architecto, tempore unde! Quasi fugit voluptate, maiores adipisci commodi nemo rem cumque.
+            <div class="row">
+                <div class="col-lg-8">
+                    <h3>Meet Peng Joon</h3>
+                    <h5>
+                        Peng Joon is recognized as the authority on how to make big money through the internet.
+                    </h5>
+                    <p>
+                        In less than 7 years, he has built an 8 figure business through his websites. Over the years, Peng Joon has refined his 5 step system that has helped thousands monetize their passion, earn passive income online and live the dot com lifestyle. His system has been widely regarded as the most strategic and innovative approach to growing an online empire.
                     </p>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error eum mollitia sit dolorem autem qui possimus ex voluptate, voluptatibus iste unde numquam illum, molestiae reprehenderit, eligendi. Illum quod esse voluptatibus.
+                        As one of the most requested speakers in the world, Peng Joon has shared the stage with Richard Branson,  Tony Robbins, Robert Kiyosaki and many other thought leaders of this era.
                     </p>
 
-                    <h5>Follow me on the web</h5>
-                    <a href="" class="btn btn-sm btn-outline-secondary">twiter</a>
-                    <a href="" class="btn btn-sm btn-outline-secondary">facebook</a>
-                    <a href="" class="btn btn-sm btn-outline-secondary">youtube</a>
+                    <div class="read-more">
+                        <div class="container">
+                            <div class="row">
+                                <div class="read-more-arrow">
+
+                                </div>
+                                <div class="read-more-button">
+                                    <button type="button" class="btn">Đọc thêm</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+
                 </div>
             </div>
-
         </div>
     </div>
 </section>
