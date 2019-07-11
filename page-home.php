@@ -4,8 +4,6 @@
 <!-- Custom CSS -->
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" >
 
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/video.css" >
-
 <style type="text/css">
 
     /* ---------------------Home one-------------------- */
@@ -87,7 +85,7 @@
     $videoUrl = get_template_directory_uri().'/video/home.mp4';
 ?>
 
-<header>
+<header id="video" class="hidden-md-down">
     <div class="overlay"></div>
     <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
         <source src="<?php echo $videoUrl; ?>" type="video/mp4">
@@ -146,6 +144,13 @@
         </div>
     </div>
 </header>
+<header id="image">
+    <div class="row">
+        <div class="col-lg-12">
+            <!--<div class="video-bg" style="background: url('<?php /*echo get_template_directory_uri(); */?>/img/feature-one-bg.jpg")  center center no-repeat;'></div>-->
+            <img src="<?php echo get_template_directory_uri(); ?>/img/video-bg.jpg"); ?>">
+    </div>
+</header>
 
 
 <!--Meet Peng Joon-->
@@ -180,6 +185,23 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!----------Article--------->
+<section id="feature-one">
+    <div class="feature-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+
+                </div>
+                <div class="col-lg-6">
 
                 </div>
             </div>
