@@ -194,15 +194,22 @@
 
 
 <!----------Article--------->
-<section id="feature-one">
+<section id="feature-three">
     <div class="feature-content">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/article-img.png" alt="macbook">
                 </div>
                 <div class="col-lg-6">
-
+                    <h2>Videos Challenge</h2>
+                    <p class="lead">
+                        Get all of your marketing videos done 100% strategically in the next 3 weeks, no experience, knowing what to say, or being comfortable on video required.
+                    </p>
+                    <p class="lead">
+                        This is not going to be a “one-size-fits-all” approach like every other course out there teaching how to create videos, instead we’re going to leverage on my #1 secret (that took me years to figure out). Are you up for the challenge?
+                    </p>
+                    <a href="" role="button" class="btn btn-primary-outline btn-lg">Git'r done!</a>
                 </div>
             </div>
         </div>

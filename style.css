@@ -351,3 +351,8 @@ header .overlay {
 	width: 100%;
 	height: 100%;
 }
+
+.feature-content {
+	padding: 75px 0;
+	overflow: hidden;
+}
