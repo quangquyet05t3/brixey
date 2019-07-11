@@ -144,15 +144,7 @@ img {
 
 
 /* =======================Video======================*/
-/* Style the video: 100% width and height to cover the entire window */
-#myVideo {
-	right: 0;
-	bottom: 0;
-	min-width: 100%;
-	min-height: 100%;
-}
 
-/* Add some content at the bottom of the video/page */
 .video-content {
 	margin-bottom: 0px;
 	background-size: cover;
@@ -189,6 +181,13 @@ img {
 	text-transform: uppercase;
 }
 
+.video-top {
+	height: 470px;
+}
+
+
+
+/* -------------Button-------------------*/
 .form-control , .btn-danger{
 	border-radius: 0;
 }
@@ -202,6 +201,7 @@ img {
 
 
 
+/* -------------Navbar-------------------*/
 .navbar {
 	background: #090601 !important;
 }
@@ -227,8 +227,48 @@ img {
 	border: #f7d373 solid 1px;
 }
 
-.video-top {
-	height: 470px;
+
+
+/* --------------------Read more-------------------- */
+.read-more {
+	height: 46px;
+	max-width: 200px;
+}
+.read-more-button {
+	border: #aa2b2b solid 2px;
+}
+.read-more-arrow {
+	background: #aa2b2b;
+	width: 46px;
+	height: 46px;
+	padding-top: 18px;
+	padding-left: 10px;
+}
+.read-more-button button.btn {
+	background: #000;
+	color: #ffffff;
+	text-transform: uppercase;
+	height: 42px;
+	border-radius: 0;
+}
+.read-more-button button.btn:focus {
+	outline: none;
+}
+.read-more-button button.btn:hover {
+	background: #fff;
+	color: #000;
 }
 
 
+/* ----------------------Section Home One------------------------ */
+#home-one .home-content {
+	padding-top: 60px;
+}
+
+.home-content h3 {
+	font-size: 50px;
+}
+
+.home-content h3,h5,p {
+	padding-bottom: 20px;
+}

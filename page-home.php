@@ -8,7 +8,7 @@
 
 <style type="text/css">
 
-    /* Home one */
+    /* ---------------------Home one-------------------- */
     #home-one {
         background: url('<?php echo get_template_directory_uri(); ?>/img/feature-one-bg.jpg') center center no-repeat;
         background-size: cover;
@@ -17,60 +17,13 @@
         width: 100%;
     }
 
-    #home-one .home-content {
-        padding-top: 60px;
-    }
-
-    /* Read more */
-    .read-more {
-        height: 46px;
-        max-width: 200px;
-    }
-    .read-more-button {
-        border: #aa2b2b solid 2px;
-    }
-    .read-more-arrow {
-        background: #aa2b2b;
-        width: 46px;
-        height: 46px;
-        padding-top: 18px;
-        padding-left: 10px;
-    }
-    .read-more-button button.btn {
-        background: #000;
-        color: #ffffff;
-        text-transform: uppercase;
-        height: 42px;
-        border-radius: 0;
-    }
-    .read-more-button button.btn:focus {
-        outline: none;
-    }
-    .read-more-button button.btn:hover {
-        background: #fff;
-        color: #000;
-    }
+    /*-----------------Arrow button----------------*/
     .arrow {
-        background: url('<?php echo get_template_directory_uri(); ?>/img/arrow.png');
-        background-repeat: no-repeat;
-        background-position: center center;
+        background: url('<?php echo get_template_directory_uri(); ?>/img/arrow.png') center center no-repeat;
         background-size: cover;
         height: 12px;
         width: 30px;
     }
-
-
-
-    .home-content h3 {
-        font-size: 50px;
-    }
-
-    .home-content h3,h5,p {
-        padding-bottom: 20px;
-    }
-
-
-
 
 </style>
 
@@ -234,25 +187,6 @@
     </div>
 </section>
 
-<!--Script to get the video-->
-<script>
-    // Get the video
-    var video = document.getElementById("myVideo");
-
-    // Get the button
-    var btn = document.getElementById("myBtn");
-
-    // Pause and play the video, and change the button text
-    function myFunction() {
-        if (video.paused) {
-            video.play();
-            btn.innerHTML = "Pause";
-        } else {
-            video.pause();
-            btn.innerHTML = "Play";
-        }
-    }
-</script>
 
 <!-- jQuery first, then Tether, then Bootstrap JS. -->
 <script src="<?php echo get_template_directory_uri() ?>/vendor/jquery/dist/jquery.min.js"></script>
