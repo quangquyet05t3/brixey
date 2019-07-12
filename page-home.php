@@ -11,8 +11,23 @@
         background: url('<?php echo get_template_directory_uri(); ?>/img/feature-one-bg.jpg') center center no-repeat;
         background-size: cover;
         color: white;
-        height: 100%;
-        width: 100%;
+    }
+    #home-1 {
+        background: url('<?php echo get_template_directory_uri(); ?>/img/bg-content-1.jpg') center center no-repeat;
+        background-size: cover;
+    }
+    #home-2 {
+        background: url('<?php echo get_template_directory_uri(); ?>/img/bg-content-2.jpg') center center no-repeat;
+        background-size: cover;
+    }
+    #social {
+        background: url('<?php echo get_template_directory_uri(); ?>/img/bg-social.jpg') center center no-repeat;
+        background-size: cover;
+        height: 334px;
+        color: white;
+    }
+    #social .col-lg-4 {
+        align-items: center;
     }
 
     /*-----------------Arrow button----------------*/
@@ -155,7 +170,7 @@
 
 <!--Meet Peng Joon-->
 <section id="home-one">
-    <div class="home-content">
+    <div class="feature-content">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
@@ -178,7 +193,7 @@
                                     </div>
                                 </div>
                                 <div class="read-more-button">
-                                    <button type="button" class="btn">Đọc thêm</button>
+                                    <button type="button" class="btn btn-dark">Đọc thêm</button>
                                 </div>
                             </div>
                         </div>
@@ -194,7 +209,7 @@
 
 
 <!----------Article--------->
-<section id="feature-three">
+<section>
     <div class="feature-content">
         <div class="container">
             <div class="row">
@@ -202,19 +217,224 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/img/article-img.png" alt="macbook">
                 </div>
                 <div class="col-lg-6">
-                    <h2>Videos Challenge</h2>
-                    <p class="lead">
+                    <h3>Videos Challenge</h3>
+                    <h4>
                         Get all of your marketing videos done 100% strategically in the next 3 weeks, no experience, knowing what to say, or being comfortable on video required.
-                    </p>
+                    </h4>
                     <p class="lead">
                         This is not going to be a “one-size-fits-all” approach like every other course out there teaching how to create videos, instead we’re going to leverage on my #1 secret (that took me years to figure out). Are you up for the challenge?
                     </p>
-                    <a href="" role="button" class="btn btn-primary-outline btn-lg">Git'r done!</a>
+                    <div class="read-more">
+                        <div class="container">
+                            <div class="row">
+                                <div class="read-more-arrow">
+                                    <div class="arrow icon">
+                                    </div>
+                                </div>
+                                <div class="read-more-button">
+                                    <button type="button" class="btn btn-light">Đọc thêm</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<section>
+    <div class="feature-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3>Videos Challenge</h3>
+                    <h4>
+                        Get all of your marketing videos done 100% strategically in the next 3 weeks, no experience, knowing what to say, or being comfortable on video required.
+                    </h4>
+                    <p class="lead">
+                        This is not going to be a “one-size-fits-all” approach like every other course out there teaching how to create videos, instead we’re going to leverage on my #1 secret (that took me years to figure out). Are you up for the challenge?
+                    </p>
+                    <div class="read-more">
+                        <div class="container">
+                            <div class="row">
+                                <div class="read-more-arrow">
+                                    <div class="arrow icon">
+                                    </div>
+                                </div>
+                                <div class="read-more-button">
+                                    <button type="button" class="btn btn-light">Đọc thêm</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/article-img.png" alt="macbook">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="feature-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/article-img.png" alt="macbook">
+                </div>
+                <div class="col-lg-6">
+                    <h3>Videos Challenge</h3>
+                    <h4>
+                        Get all of your marketing videos done 100% strategically in the next 3 weeks, no experience, knowing what to say, or being comfortable on video required.
+                    </h4>
+                    <p class="lead">
+                        This is not going to be a “one-size-fits-all” approach like every other course out there teaching how to create videos, instead we’re going to leverage on my #1 secret (that took me years to figure out). Are you up for the challenge?
+                    </p>
+                    <div class="read-more">
+                        <div class="container">
+                            <div class="row">
+                                <div class="read-more-arrow">
+                                    <div class="arrow icon">
+                                    </div>
+                                </div>
+                                <div class="read-more-button">
+                                    <button type="button" class="btn btn-light">Đọc thêm</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="home-1">
+    <div class="feature-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3>Videos Challenge</h3>
+                    <h4>
+                        Get all of your marketing videos done 100% strategically in the next 3 weeks, no experience, knowing what to say, or being comfortable on video required.
+                    </h4>
+                    <p class="lead">
+                        This is not going to be a “one-size-fits-all” approach like every other course out there teaching how to create videos, instead we’re going to leverage on my #1 secret (that took me years to figure out). Are you up for the challenge?
+                    </p>
+                    <div class="read-more">
+                        <div class="container">
+                            <div class="row">
+                                <div class="read-more-arrow">
+                                    <div class="arrow icon">
+                                    </div>
+                                </div>
+                                <div class="read-more-button">
+                                    <button type="button" class="btn btn-light">Đọc thêm</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/article-img.png" alt="macbook">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="home-2">
+    <div class="feature-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/article-img.png" alt="macbook">
+                </div>
+                <div class="col-lg-6">
+                    <h3>Videos Challenge</h3>
+                    <h4>
+                        Get all of your marketing videos done 100% strategically in the next 3 weeks, no experience, knowing what to say, or being comfortable on video required.
+                    </h4>
+                    <p class="lead">
+                        This is not going to be a “one-size-fits-all” approach like every other course out there teaching how to create videos, instead we’re going to leverage on my #1 secret (that took me years to figure out). Are you up for the challenge?
+                    </p>
+                    <div class="read-more">
+                        <div class="container">
+                            <div class="row">
+                                <div class="read-more-arrow">
+                                    <div class="arrow icon">
+                                    </div>
+                                </div>
+                                <div class="read-more-button">
+                                    <button type="button" class="btn btn-light">Đọc thêm</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="social">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-12 col-md-auto">
+                <h3>FOLLOW PENG JOON ON SOCIAL MEDIA</h3>
+            </div>
+        </div>
+        <div class="row justify-content-around social-area">
+            <div class="col-lg-2">
+                <div class="container">
+                    <div class="row justify-content-md-center">
+                        <div class="col-12 col-md-auto">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-fb.png" />
+                        </div>
+                    </div>
+                    <div class="row justify-content-md-center">
+                        <div class="col-12 col-md-auto">
+                            <h5>FACEBOOK</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="container">
+                    <div class="row justify-content-md-center">
+                        <div class="col-12 col-md-auto">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-diagram.png" />
+                        </div>
+                    </div>
+                    <div class="row justify-content-md-center">
+                        <div class="col-12 col-md-auto">
+                            <h5>INSTAGRAM</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="container">
+                    <div class="row justify-content-md-center">
+                        <div class="col-12 col-md-auto">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-youtube.png" />
+                        </div>
+                    </div>
+                    <div class="row justify-content-md-center">
+                        <div class="col-12 col-md-auto">
+                            <h5>YOUTUBE</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
 
 
 <!-- jQuery first, then Tether, then Bootstrap JS. -->
