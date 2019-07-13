@@ -257,24 +257,24 @@ header .overlay {
 	background: #090601 !important;
 }
 
-.nav-item {
+#header .nav-item {
 	padding-left: 10px;
 	padding-right: 10px;
 	height: 36px;
 	margin-right: 3px;
 }
 
-.nav-link {
+#header .nav-link {
 	color: #ffffff !important;
 	height: 34px;
 	padding-top: 5px;
 }
 
-.nav-item:hover{
+#header .nav-item:hover{
 	border: #f7d373 solid 1px;
 }
 
-.active {
+#header .active {
 	border: #f7d373 solid 1px;
 }
 
@@ -385,4 +385,29 @@ header .overlay {
 }
 .social-area {
 	margin-top: 60px;
+}
+.social-area h5 {
+	font-weight: normal;
+	margin-top: 20px;
+	font-family: "sans-serif";
+	letter-spacing: 3px;
+}
+
+/* ---------------------- Form ------------------------------- */
+#form-footer {
+	background: #e2ded3;
+	padding: 100px 0px;
+}
+
+/* -------------------- Footer ------------------------ */
+#footer {
+	background: #0d0d0d;
+	color: white;
+}
+#footer .nav-link {
+	color: #6c6c6c;
+}
+
+#footer ul {
+	padding: 40px 0 10px 0;
 }
