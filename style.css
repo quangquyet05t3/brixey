@@ -400,14 +400,14 @@ header .overlay {
 
 /* ---------------------- Form ------------------------------- */
 #form-footer {
-	background: #e2ded3;
+	background: #e0e0e0;
 	padding: 100px 0px;
 }
 
 /* -------------------- Footer ------------------------ */
 #footer {
-	background: #0d0d0d;
 	color: white;
+	padding: 27px 0;
 }
 #footer .nav-link {
 	color: #6c6c6c;
@@ -418,10 +418,10 @@ header .overlay {
 }
 
 /* --------------------- Fix layout for Mobile --------------------- */
-section {
-	margin-right: -30px;
-}
+/*section {*/
+	/*margin-right: -30px;*/
+/*}*/
 
-#footer img {
-	margin-right: 15px;
-}
+/*#footer img {*/
+	/*margin-right: 15px;*/
+/*}*/
