@@ -420,3 +420,7 @@ header .overlay {
 section {
 	margin-right: -30px;
 }
+
+#footer img {
+	margin-right: 15px;
+}
