@@ -257,24 +257,24 @@ header .overlay {
 	background: #090601 !important;
 }
 
-#header .nav-item {
-	padding-left: 10px;
-	padding-right: 10px;
+#nav-main .nav-item {
+	padding-left: 2px;
+	padding-right: 2px;
 	height: 36px;
-	margin-right: 3px;
+	margin-right: 2px;
 }
 
-#header .nav-link {
+#nav-main .nav-link {
 	color: #ffffff !important;
 	height: 34px;
 	padding-top: 5px;
 }
 
-#header .nav-item:hover{
+#nav-main .nav-item:hover{
 	border: #f7d373 solid 1px;
 }
 
-#header .active {
+#nav-main .active {
 	border: #f7d373 solid 1px;
 }
 
