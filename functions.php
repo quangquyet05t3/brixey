@@ -38,3 +38,32 @@ define('BRIXEY_BRAND_NAME', $brixey_theme->get( 'Author' ), true);
  * All Main Files Include
  */
 require_once( BRIXEY_FRAMEWORK . '/init.php' );
+
+
+
+
+/**
+ * Header menu
+ */
+
+function register_my_menu() {
+    register_nav_menu('header-menu',__( 'Header Menu' )); // đặt tên là Header Menu
+}
+add_action( 'init', 'register_my_menu' );
+
+require_once get_template_directory() . '/vendor/inc/Bootstrap-Navwalker.php';
+
+
+
+function mini_blog_widgets_init() {
+    register_sidebar( array(
+        'name'          => __( 'Sidebar', 'sidebar-mini' ),
+        'id'            => 'sidebar-mini',
+        'description'   => __( 'Ở đây sẽ chứa những widget của Mini Blog', 'sidebar-mini' ),
+        'before_widget' => '<div id="%1$s" class="card my-4 %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h5 class="card-header">',
+        'after_title'   => '</h5>',
+    ) );
+}
+add_action( 'widgets_init', 'mini_blog_widgets_init' );

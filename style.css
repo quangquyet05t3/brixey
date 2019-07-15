@@ -257,11 +257,12 @@ header .overlay {
 	background: #090601 !important;
 }
 
+
 #nav-main .nav-item {
 	padding-left: 2px;
 	padding-right: 2px;
 	height: 36px;
-	margin-right: 2px;
+	margin-right: 3px;
 }
 
 #nav-main .nav-link {
