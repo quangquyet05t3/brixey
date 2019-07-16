@@ -1,5 +1,5 @@
 <?php get_header() ?>
-<!-- The video lam sau -->
+<!-- The video -->
 <?php
     $videoUrl = get_template_directory_uri().'/video/home.mp4';
 ?>
@@ -66,7 +66,6 @@
     <header id="image">
         <div class="row">
             <div class="col-lg-12">
-                <!--<div class="video-bg" style="background: url('<?php /*echo get_template_directory_uri(); */?>/img/feature-one-bg.jpg")  center center no-repeat;'></div>-->
                 <img src="<?php echo get_template_directory_uri(); ?>/img/video-bg.jpg"); ?>">
             </div>
     </header>
@@ -114,175 +113,37 @@
 </section>
 
 <!----------Article--------->
-<section>
-    <div class="feature-content">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/article-img.png" alt="macbook">
-                </div>
-                <div class="col-lg-6">
-                    <h3>Videos Challenge</h3>
-                    <h4>
-                        Get all of your marketing videos done 100% strategically in the next 3 weeks, no experience, knowing what to say, or being comfortable on video required.
-                    </h4>
-                    <p class="lead">
-                        This is not going to be a “one-size-fits-all” approach like every other course out there teaching how to create videos, instead we’re going to leverage on my #1 secret (that took me years to figure out). Are you up for the challenge?
-                    </p>
-                    <div class="read-more">
-                        <div class="container">
-                            <div class="row">
-                                <div class="read-more-arrow">
-                                    <div class="arrow icon">
-                                    </div>
-                                </div>
-                                <div class="read-more-button">
-                                    <button type="button" class="btn btn-light">Đọc thêm</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<section>
-    <div class="feature-content">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <h3>Videos Challenge</h3>
-                    <h4>
-                        Get all of your marketing videos done 100% strategically in the next 3 weeks, no experience, knowing what to say, or being comfortable on video required.
-                    </h4>
-                    <p class="lead">
-                        This is not going to be a “one-size-fits-all” approach like every other course out there teaching how to create videos, instead we’re going to leverage on my #1 secret (that took me years to figure out). Are you up for the challenge?
-                    </p>
-                    <div class="read-more">
-                        <div class="container">
-                            <div class="row">
-                                <div class="read-more-arrow">
-                                    <div class="arrow icon">
-                                    </div>
-                                </div>
-                                <div class="read-more-button">
-                                    <button type="button" class="btn btn-light">Đọc thêm</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/article-img.png" alt="macbook">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<?php
+    wp_reset_postdata();
 
-<section>
-    <div class="feature-content">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/article-img.png" alt="macbook">
-                </div>
-                <div class="col-lg-6">
-                    <h3>Videos Challenge</h3>
-                    <h4>
-                        Get all of your marketing videos done 100% strategically in the next 3 weeks, no experience, knowing what to say, or being comfortable on video required.
-                    </h4>
-                    <p class="lead">
-                        This is not going to be a “one-size-fits-all” approach like every other course out there teaching how to create videos, instead we’re going to leverage on my #1 secret (that took me years to figure out). Are you up for the challenge?
-                    </p>
-                    <div class="read-more">
-                        <div class="container">
-                            <div class="row">
-                                <div class="read-more-arrow">
-                                    <div class="arrow icon">
-                                    </div>
-                                </div>
-                                <div class="read-more-button">
-                                    <button type="button" class="btn btn-light">Đọc thêm</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    $query = array(
+        'type' => 'post',
+        'posts_per_page' => 6,
+        'offset' => 1,
+    );
 
-<section id="home-1">
-    <div class="feature-content">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <h3>Videos Challenge</h3>
-                    <h4>
-                        Get all of your marketing videos done 100% strategically in the next 3 weeks, no experience, knowing what to say, or being comfortable on video required.
-                    </h4>
-                    <p class="lead">
-                        This is not going to be a “one-size-fits-all” approach like every other course out there teaching how to create videos, instead we’re going to leverage on my #1 secret (that took me years to figure out). Are you up for the challenge?
-                    </p>
-                    <div class="read-more">
-                        <div class="container">
-                            <div class="row">
-                                <div class="read-more-arrow">
-                                    <div class="arrow icon">
-                                    </div>
-                                </div>
-                                <div class="read-more-button">
-                                    <button type="button" class="btn btn-light">Đọc thêm</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/article-img.png" alt="macbook">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    $lastPost = new WP_Query($query);
+    $index = 1;
+    if( $lastPost->have_posts() ):
 
-<section id="home-2">
-    <div class="feature-content">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/article-img.png" alt="macbook">
-                </div>
-                <div class="col-lg-6">
-                    <h3>Videos Challenge</h3>
-                    <h4>
-                        Get all of your marketing videos done 100% strategically in the next 3 weeks, no experience, knowing what to say, or being comfortable on video required.
-                    </h4>
-                    <p class="lead">
-                        This is not going to be a “one-size-fits-all” approach like every other course out there teaching how to create videos, instead we’re going to leverage on my #1 secret (that took me years to figure out). Are you up for the challenge?
-                    </p>
-                    <div class="read-more">
-                        <div class="container">
-                            <div class="row">
-                                <div class="read-more-arrow">
-                                    <div class="arrow icon">
-                                    </div>
-                                </div>
-                                <div class="read-more-button">
-                                    <button type="button" class="btn btn-light">Đọc thêm</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        while( $lastPost->have_posts() ): $lastPost->the_post(); ?>
+        <?php $sectionId = sprintf('home-%s', $index ); ?>
+        <?php $tempPart = $index%2==1? 'template-parts/content-home-left': 'template-parts/content-home-right'; ?>
+            <section id="<?php echo $sectionId; ?>">
+                <?php get_template_part($tempPart, get_post_format()); ?>
+            </section>
+
+        <?php $index++; ?>
+
+        <?php endwhile;
+
+    endif;
+
+    wp_reset_postdata();
+
+
+?>
 
 <section id="social">
     <div class="container">

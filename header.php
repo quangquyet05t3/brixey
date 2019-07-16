@@ -28,11 +28,11 @@
             background-size: cover;
             color: white;
         }
-        #home-1 {
+        #home-3,  #home-5{
             background: url('<?php echo get_template_directory_uri(); ?>/img/bg-content-1.jpg') center center no-repeat;
             background-size: cover;
         }
-        #home-2 {
+        #home-4, #home-6 {
             background: url('<?php echo get_template_directory_uri(); ?>/img/bg-content-2.jpg') center center no-repeat;
             background-size: cover;
         }
