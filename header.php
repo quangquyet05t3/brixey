@@ -4,13 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>
-        <?php if (is_home()): ?>
-            <?php bloginfo('name') ?>
-        <?php elseif( is_single() ): ?>
-            <?php echo get_field('seo_title'); ?>
-        <?php else: ?>
-            <?php wp_title('', true,''); ?>
-        <?php endif ?>
+        <?php bloginfo('name') ?>
     </title>
 
     <meta name="description" content="<?php bloginfo('description') ?>" />
@@ -43,6 +37,15 @@
         }
         #social .col-lg-4 {
             align-items: center;
+        }
+        #content {
+            background: url('<?php echo get_template_directory_uri(); ?>/img/bg-single.jpg') center center no-repeat;
+            background-size: cover;
+            color: black;
+        }
+        #content h5 {
+            color: black;
+
         }
 
         /*-----------------Arrow button----------------*/
