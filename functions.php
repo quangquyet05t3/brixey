@@ -61,12 +61,37 @@ require_once get_template_directory() . '/vendor/inc/Bootstrap-Navwalker.php';
 	==========================================
 */
 function submit_info() {
+
+    $url = 'http://cacanh.local/forminfo#wpcf7-f1530-o1';
+    $body = array(
+        '_wpcf7' => '1530',
+        '_wpcf7_version' => '5.1.3',
+        '_wpcf7_locale' => 'en_GB',
+        '_wpcf7_unit_tag' => 'wpcf7-f1530-o1',
+        '_wpcf7_container_post' => '0',
+        'text-981' => 'quyet',
+        'tel-623' => '0986017705',
+        'email-941' => 'quangquyet05t3@gmail.com'
+    );
+    $args = array(
+        'method' => 'POST',
+        'timeout' => 45,
+        'redirection' => 5,
+        'httpversion' => '1.0',
+        'blocking' => true,
+        'headers' => array(),
+        'body' => $body,
+        'cookies' => array()
+    );
+
+    $response = wp_remote_post( $url, $args);
+
+
     $name = sanitize_text_field($_POST['full_name']);
     $email = sanitize_email($_POST['email']);
 
     $return = array(
-        'name' => $name,
-        'mail' => $email
+        'result' => $response
     );
     wp_send_json($return);
 
