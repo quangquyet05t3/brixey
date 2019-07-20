@@ -135,11 +135,12 @@
 </section>
 
 <!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script src="/wp-includes/js/jquery/jquery.js"></script>
 <script src="<?php echo get_template_directory_uri() ?>/vendor/tether/dist/js/tether.min.js"></script>
 <script src="<?php echo get_template_directory_uri() ?>/vendor/bootstrap/dist/js/holder.min.js"></script>
 <script src="<?php echo get_template_directory_uri() ?>/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-
-<?php /*wp_footer() */?>
+<script src="<?php echo get_template_directory_uri() ?>/js/brixey.js"></script>
+<?php /*wp_footer()*/ ?>
 
 </body>
 </html>

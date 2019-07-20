@@ -73,3 +73,25 @@ function submit_info() {
     wp_die();
 }
 add_action( 'wp_ajax_submit_info', 'submit_info' );
+
+
+
+
+/*
+	==========================================
+	Call Ajax Page
+	==========================================
+*/
+function submit_quyet() {
+    $name = sanitize_text_field($_POST['yourname']);
+    $email = sanitize_email($_POST['youremail']);
+
+    $return = array(
+        'name' => $name,
+        'mail' => $email
+    );
+    wp_send_json($return);
+
+    wp_die();
+}
+add_action( 'wp_ajax_submit_quyet', 'submit_quyet' );
