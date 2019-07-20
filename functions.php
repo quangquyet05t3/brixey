@@ -33,11 +33,11 @@ define('BRIXEY_NAME', $brixey_theme->get( 'Name' ), true);
 define('BRIXEY_VERSION', $brixey_theme->get( 'Version' ), true);
 define('BRIXEY_BRAND_URL', $brixey_theme->get( 'AuthorURI' ), true);
 define('BRIXEY_BRAND_NAME', $brixey_theme->get( 'Author' ), true);
-
 /**
  * All Main Files Include
  */
 require_once( BRIXEY_FRAMEWORK . '/init.php' );
+
 
 
 
@@ -55,15 +55,21 @@ require_once get_template_directory() . '/vendor/inc/Bootstrap-Navwalker.php';
 
 
 
-function mini_blog_widgets_init() {
-    register_sidebar( array(
-        'name'          => __( 'Sidebar', 'sidebar-mini' ),
-        'id'            => 'sidebar-mini',
-        'description'   => __( 'Ở đây sẽ chứa những widget của Mini Blog', 'sidebar-mini' ),
-        'before_widget' => '<div id="%1$s" class="card my-4 %2$s">',
-        'after_widget'  => '</div>',
-        'before_title'  => '<h5 class="card-header">',
-        'after_title'   => '</h5>',
-    ) );
+/*
+	==========================================
+	Call Ajax Page
+	==========================================
+*/
+function submit_info() {
+    $name = sanitize_text_field($_POST['full_name']);
+    $email = sanitize_email($_POST['email']);
+
+    $return = array(
+        'name' => $name,
+        'mail' => $email
+    );
+    wp_send_json($return);
+
+    wp_die();
 }
-add_action( 'widgets_init', 'mini_blog_widgets_init' );
+add_action( 'wp_ajax_submit_info', 'submit_info' );
