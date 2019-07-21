@@ -23,7 +23,7 @@ jQuery('#form-info').submit(function (event ) {
         data: jQuery('#form-info').serialize(),
         dataType: 'json',
         success: function (data) {
-            console.log(data);
+            jQuery('#myModal').modal('show');
         }
     });
 

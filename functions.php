@@ -62,8 +62,9 @@ require_once get_template_directory() . '/vendor/inc/Bootstrap-Navwalker.php';
 */
 function submit_info() {
 
-    $url = 'http://cacanh.local/forminfo#wpcf7-f1530-o1';
-    $body = array(
+    $url = 'http://cacanh.local/forminfo';
+
+    /*$body = array(
         '_wpcf7' => '1530',
         '_wpcf7_version' => '5.1.3',
         '_wpcf7_locale' => 'en_GB',
@@ -83,15 +84,33 @@ function submit_info() {
         'body' => $body,
         'cookies' => array()
     );
-
     $response = wp_remote_post( $url, $args);
+    */
 
 
-    $name = sanitize_text_field($_POST['full_name']);
+    $fullName = sanitize_text_field($_POST['full_name']);
     $email = sanitize_email($_POST['email']);
+    $phone = sanitize_text_field($_POST['phone']);
+
+    //$responseHtml = FakeSuccess();
+    $responseHtml = FakeFail();
+    $response = new \SimpleXMLElement($responseHtml);
+
+    $success = false;
+    $message = (string)$response->div;
+
+    //Message success from config
+    $messageSuccess = 'Thank you for your message. It has been sent.';
+    if($message==$messageSuccess) {
+        $success = true;
+    }
 
     $return = array(
-        'result' => $response
+        'name' => $fullName,
+        'email' => $email,
+        'phone' => $phone,
+        'success' => $success,
+        'message' => $message
     );
     wp_send_json($return);
 
@@ -120,3 +139,133 @@ function submit_quyet() {
     wp_die();
 }
 add_action( 'wp_ajax_submit_quyet', 'submit_quyet' );
+
+
+
+function FakeSuccess() {
+    $str = '<div role="form" class="wpcf7" id="wpcf7-f1529-o1" lang="en-GB" dir="ltr">
+    <div class="screen-reader-response" role="alert">Thank you for your message. It has been sent.</div>
+    <form action="/forminfo/#wpcf7-f1529-o1" method="post" class="wpcf7-form sent" novalidate="novalidate">
+        <div style="display: none;">
+            <input type="hidden" name="_wpcf7" value="1529"/>
+            <input type="hidden" name="_wpcf7_version" value="5.1.3"/>
+            <input type="hidden" name="_wpcf7_locale" value="en_GB"/>
+            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f1529-o1"/>
+            <input type="hidden" name="_wpcf7_container_post" value="0"/>
+        </div>
+        <p>
+            <label>Your Name (required)
+                <br/>
+                <span class="wpcf7-form-control-wrap your-name">
+                    <input type="text" name="your-name" value="" size="40"
+                           class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true"
+                           aria-invalid="false"/>
+                </span>
+            </label>
+        </p>
+        <p>
+            <label>Your Email (required)
+                <br/>
+                <span class="wpcf7-form-control-wrap your-email">
+                    <input type="email" name="your-email" value="" size="40"
+                           class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+                           aria-required="true" aria-invalid="false"/>
+                </span>
+            </label>
+        </p>
+        <p>
+            <label>Subject
+                <br/>
+                <span class="wpcf7-form-control-wrap your-subject">
+                    <input type="text" name="your-subject" value="" size="40" class="wpcf7-form-control wpcf7-text"
+                           aria-invalid="false"/>
+                </span>
+            </label>
+        </p>
+        <p>
+            <label>Your Message
+                <br/>
+                <span class="wpcf7-form-control-wrap your-message">
+                    <textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea"
+                              aria-invalid="false"></textarea>
+                </span>
+            </label>
+        </p>
+        <p>
+            <input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit"/>
+        </p>
+        <div class="wpcf7-response-output wpcf7-mail-sent-ok" role="alert">Thank you for your message. It has been
+            sent.
+        </div>
+    </form>
+</div>';
+
+    return $str;
+}
+
+
+function FakeFail() {
+    $str = '<div role="form" class="wpcf7" id="wpcf7-f1529-o1" lang="en-GB" dir="ltr">
+                <div class="screen-reader-response" role="alert">One or more fields have an error. Please check and try again.
+                    <ul>
+                        <li>The field is required.</li>
+                    </ul>
+                </div>
+                <form action="/forminfo/#wpcf7-f1529-o1" method="post" class="wpcf7-form invalid" novalidate="novalidate">
+                    <div style="display: none;">
+                        <input type="hidden" name="_wpcf7" value="1529"/>
+                        <input type="hidden" name="_wpcf7_version" value="5.1.3"/>
+                        <input type="hidden" name="_wpcf7_locale" value="en_GB"/>
+                        <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f1529-o1"/>
+                        <input type="hidden" name="_wpcf7_container_post" value="0"/>
+                    </div>
+                    <p>
+                        <label>Your Name (required)
+                            <br/>
+                            <span class="wpcf7-form-control-wrap your-name">
+                                <input type="text" name="your-name" value="quyet" size="40"
+                                       class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true"
+                                       aria-invalid="false"/>
+                            </span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>Your Email (required)
+                            <br/>
+                            <span class="wpcf7-form-control-wrap your-email">
+                                <input type="email" name="your-email" value="" size="40"
+                                       class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email wpcf7-not-valid"
+                                       aria-required="true" aria-invalid="true"/>
+                                <span role="alert" class="wpcf7-not-valid-tip">The field is required.</span>
+                            </span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>Subject
+                            <br/>
+                            <span class="wpcf7-form-control-wrap your-subject">
+                                <input type="text" name="your-subject" value="" size="40" class="wpcf7-form-control wpcf7-text"
+                                       aria-invalid="false"/>
+                            </span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>Your Message
+                            <br/>
+                            <span class="wpcf7-form-control-wrap your-message">
+                                <textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea"
+                                          aria-invalid="false"></textarea>
+                            </span>
+                        </label>
+                    </p>
+                    <p>
+                        <input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit"/>
+                    </p>
+                    <div class="wpcf7-response-output wpcf7-validation-errors" role="alert">One or more fields have an error. Please
+                        check and try again.
+                    </div>
+                </form>
+            </div>';
+
+    return $str;
+}

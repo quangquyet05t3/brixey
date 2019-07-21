@@ -1,1 +1,1 @@
-<?php echo do_shortcode("[contact-form-7 id=\"1530\" title=\"FormInfo\"]"); ?>
+<?php echo do_shortcode("[contact-form-7 id=\"1529\" title=\"FormInfo2\"]"); ?>

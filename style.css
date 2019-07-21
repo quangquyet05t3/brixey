@@ -427,6 +427,9 @@ header .overlay {
 	padding: 40px 0 10px 0;
 }
 
+#myModal h5 {
+	color: #000000;
+}
 /* --------------------- Fix layout for Mobile --------------------- */
 /*section {*/
 	/*margin-right: -30px;*/
