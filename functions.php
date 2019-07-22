@@ -61,22 +61,26 @@ require_once get_template_directory() . '/vendor/inc/Bootstrap-Navwalker.php';
 	==========================================
 */
 function submit_info() {
-
-    $url = 'http://cacanh.local/forminfo';
-
-    /*$body = array(
-        '_wpcf7' => '1530',
+    $url = get_site_url(). '/forminfo/';
+    $fullName = sanitize_text_field($_POST['full_name']);
+    $email = sanitize_email($_POST['email']);
+    $phone = sanitize_text_field($_POST['phone']);
+    $success = false;
+    $body = array(
+        '_wpcf7' => '1529',
         '_wpcf7_version' => '5.1.3',
         '_wpcf7_locale' => 'en_GB',
-        '_wpcf7_unit_tag' => 'wpcf7-f1530-o1',
+        '_wpcf7_unit_tag' => 'wpcf7-f1529-o1',
         '_wpcf7_container_post' => '0',
-        'text-981' => 'quyet',
-        'tel-623' => '0986017705',
-        'email-941' => 'quangquyet05t3@gmail.com'
+        'your-name' => 'quyet',
+        'your-email' => 'quangquyet05t3@gmail.com',
+        'your-subject' => '0986017705',
+        'your-message' => 'My phone number: 0986017705'
+
     );
     $args = array(
         'method' => 'POST',
-        'timeout' => 45,
+        'timeout' => 5,
         'redirection' => 5,
         'httpversion' => '1.0',
         'blocking' => true,
@@ -85,24 +89,19 @@ function submit_info() {
         'cookies' => array()
     );
     $response = wp_remote_post( $url, $args);
-    */
-
-
-    $fullName = sanitize_text_field($_POST['full_name']);
-    $email = sanitize_email($_POST['email']);
-    $phone = sanitize_text_field($_POST['phone']);
-
-    //$responseHtml = FakeSuccess();
-    $responseHtml = FakeFail();
-    $response = new \SimpleXMLElement($responseHtml);
-
-    $success = false;
-    $message = (string)$response->div;
-
-    //Message success from config
-    $messageSuccess = 'Thank you for your message. It has been sent.';
-    if($message==$messageSuccess) {
-        $success = true;
+    if($response instanceof WP_Error) {
+        $message = $response->get_error_message();
+    } else {
+        $responseHtml = $response['body'];
+        //$responseHtml = FakeSuccess();
+        //$responseHtml = FakeFail();
+        $response = new \SimpleXMLElement($responseHtml);
+        $message = (string)$response->div;
+        //Message success from config
+        $messageSuccess = 'Thank you for your message. It has been sent.';
+        if($message==$messageSuccess) {
+            $success = true;
+        }
     }
 
     $return = array(
@@ -113,35 +112,13 @@ function submit_info() {
         'message' => $message
     );
     wp_send_json($return);
-
     wp_die();
 }
 add_action( 'wp_ajax_submit_info', 'submit_info' );
 
 
 
-
-/*
-	==========================================
-	Call Ajax Page
-	==========================================
-*/
-function submit_quyet() {
-    $name = sanitize_text_field($_POST['yourname']);
-    $email = sanitize_email($_POST['youremail']);
-
-    $return = array(
-        'name' => $name,
-        'mail' => $email
-    );
-    wp_send_json($return);
-
-    wp_die();
-}
-add_action( 'wp_ajax_submit_quyet', 'submit_quyet' );
-
-
-
+#region ===========FakeData==============
 function FakeSuccess() {
     $str = '<div role="form" class="wpcf7" id="wpcf7-f1529-o1" lang="en-GB" dir="ltr">
     <div class="screen-reader-response" role="alert">Thank you for your message. It has been sent.</div>
@@ -202,8 +179,6 @@ function FakeSuccess() {
 
     return $str;
 }
-
-
 function FakeFail() {
     $str = '<div role="form" class="wpcf7" id="wpcf7-f1529-o1" lang="en-GB" dir="ltr">
                 <div class="screen-reader-response" role="alert">One or more fields have an error. Please check and try again.
@@ -269,3 +244,4 @@ function FakeFail() {
 
     return $str;
 }
+#endregion

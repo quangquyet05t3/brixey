@@ -80,6 +80,26 @@
 
 
 <!--Meet Peng Joon-->
+
+<?php
+$args = [
+    'type' => 'post',
+    'posts_per_page' => 1,
+    'post__in'  => get_option( 'sticky_posts' )  // Get article with sticky
+];
+$the_query = new WP_Query($args);
+?>
+<?php if ( $the_query->have_posts() ) : ?>
+
+    <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+        <div class="carousel-item <?php echo $the_query->current_post == 1 ? 'active' : ''  ?>">
+            <?php the_post_thumbnail('blog-thumbnail',['class'=>'fuild-img']) ?>
+            <h3><a href="<?php the_permalink() ?>"><?php echo wp_trim_words( get_the_title() , 12 ) ?></a></h3>
+        </div>
+    <?php endwhile; ?>
+<?php endif; ?>
+<?php wp_reset_postdata(); ?>
+
 <section id="home-one">
     <div class="feature-content">
         <div class="container">
