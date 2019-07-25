@@ -6,6 +6,7 @@
 ?>
 
 
+
 <section>
     <header id="video" class="hidden-md-down">
         <div class="overlay"></div>
@@ -33,21 +34,21 @@
                                 <div class="col-md-3 p-1">
                                     <div class="form-group row">
                                         <div class="col-12">
-                                            <input class="form-control" type="text" placeholder="Họ tên" id="full_name" name="full_name">
+                                            <input class="form-control" type="text" placeholder="Họ tên" name="full_name">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-3 p-1">
                                     <div class="form-group row">
                                         <div class="col-12">
-                                            <input class="form-control" type="text" placeholder="Số điện thoại"  id="phone" name="phone">
+                                            <input class="form-control" type="text" placeholder="Số điện thoại"  name="phone">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-3 p-1">
                                     <div class="form-group row">
                                         <div class="col-12">
-                                            <input class="form-control" type="text" placeholder="Email" id="email" name="email">
+                                            <input class="form-control" type="text" placeholder="Email" name="email">
                                         </div>
                                     </div>
                                 </div>
@@ -75,6 +76,53 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/img/video-bg.jpg"); ?>">
             </div>
     </header>
+</section>
+
+
+<section id="form-header">
+    <div class="feature-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="video-content-text">
+                        <h3>ĐỪNG MỞ QUÁN NẾU CHƯA BIẾT QUY TRÌNH SETUP</h3>
+                        <h5>Nhận quy trình SETUP COFFEE từ A-Z</h5>
+                    </div>
+                    <form id="form-info2" action="#" method="post" data-url="<?php echo admin_url('admin-ajax.php'); ?>">
+                        <div class="col-md-3 p-1">
+                            <div class="form-group row">
+                                <div class="col-12">
+                                    <input class="form-control" type="text" placeholder="Họ tên" name="full_name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 p-1">
+                            <div class="form-group row">
+                                <div class="col-12">
+                                    <input class="form-control" type="text" placeholder="Số điện thoại" name="phone">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 p-1">
+                            <div class="form-group row">
+                                <div class="col-12">
+                                    <input class="form-control" type="text" placeholder="Email" name="email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 p-1">
+                            <div class="form-group row">
+                                <div class="col-12">
+                                    <input type="hidden" name="action" value="submit_info">
+                                    <button type="submit" class="btn btn-danger">Nhận ngay</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 
@@ -171,7 +219,24 @@ $the_query = new WP_Query($args);
 
 ?>
 
-<div id="myModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<!--Modal Waiting-->
+<div id="modal-waiting" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                </div>
+                <div class="progress">
+                    Đang xử lý...
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Modal Result-->
+<div id="modal-result" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
@@ -194,5 +259,4 @@ $the_query = new WP_Query($args);
         </div>
     </div>
 </div>
-
 <?php get_footer() ?>

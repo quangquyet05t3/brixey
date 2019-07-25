@@ -64,37 +64,39 @@
                         <h3>ĐỪNG MỞ QUÁN NẾU CHƯA BIẾT QUY TRÌNH SETUP</h3>
                         <h5>Nhận quy trình SETUP COFFEE từ A-Z</h5>
                     </div>
-
+                    <form id="form-info3" action="#" method="post" data-url="<?php echo admin_url('admin-ajax.php'); ?>">
                     <div class="row">
                         <div class="col-md-3 p-1">
                             <div class="form-group row">
                                 <div class="col-12">
-                                    <input class="form-control" type="text" placeholder="Họ tên" id="full_name">
+                                    <input class="form-control" type="text" placeholder="Họ tên" name="full_name">
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-3 p-1">
                             <div class="form-group row">
                                 <div class="col-12">
-                                    <input class="form-control" type="text" placeholder="Số điện thoại"  id="phone">
+                                    <input class="form-control" type="text" placeholder="Số điện thoại" name="phone">
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-3 p-1">
                             <div class="form-group row">
                                 <div class="col-12">
-                                    <input class="form-control" type="text" placeholder="Email" id="email">
+                                    <input class="form-control" type="text" placeholder="Email" name="email">
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-3 p-1">
                             <div class="form-group row">
                                 <div class="col-12">
-                                    <button type="button" class="btn btn-danger">Nhận ngay</button>
+                                    <input type="hidden" name="action" value="submit_info">
+                                    <button type="submit" class="btn btn-danger">Nhận ngay</button>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>

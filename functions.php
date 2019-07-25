@@ -72,10 +72,10 @@ function submit_info() {
         '_wpcf7_locale' => 'en_GB',
         '_wpcf7_unit_tag' => 'wpcf7-f1529-o1',
         '_wpcf7_container_post' => '0',
-        'your-name' => 'quyet',
-        'your-email' => 'quangquyet05t3@gmail.com',
-        'your-subject' => '0986017705',
-        'your-message' => 'My phone number: 0986017705'
+        'your-name' => $fullName,
+        'your-email' => $email,
+        'your-subject' => $phone,
+        'your-message' => 'My phone number: '.$phone
 
     );
     $args = array(

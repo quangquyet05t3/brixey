@@ -354,6 +354,9 @@ header .overlay {
 	#image {
 		display: none;
 	}
+	#form-header {
+		display: none;
+	}
 }
 @media screen and ( max-width : 991px ) {
 	#image {
@@ -363,6 +366,17 @@ header .overlay {
 	.feature-content {
 		display: flex;
 		align-items: center;
+	}
+	#social {
+		align-items: center;
+		text-align: center;
+	}
+	#form-footer {
+		display: none;
+	}
+	#form-header {
+		display: block;
+		background: #e0e0e0;
 	}
 
 }
@@ -427,7 +441,7 @@ header .overlay {
 	padding: 40px 0 10px 0;
 }
 
-#myModal h5 {
+.modal-header h5 {
 	color: #000000;
 }
 /* --------------------- Fix layout for Mobile --------------------- */
