@@ -249,7 +249,7 @@ $the_query = new WP_Query($args);
                 <div class="alert alert-success" role="alert">
                     <strong>Xin chúc mừng!</strong> Bạn đã đăng ký thành công. Chúng tôi đã gửi email đến bạn.
                 </div>
-                <div class="alert alert-danger" role="alert">
+                <div id="error-message" class="alert alert-danger" role="alert">
                     <strong>Có lỗi xảy ra!</strong> Vui lòng kiểm tra lại thông tin.
                 </div>
             </div>
