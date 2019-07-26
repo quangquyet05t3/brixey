@@ -52,3 +52,15 @@ function showSucess() {
     jQuery('#modal-waiting').modal('hide');
     jQuery('#modal-result').modal('show');
 }
+
+
+/*
+Fix error mobile
+$(document).ready(function(){
+    $.ajaxSetup({ cache: false }); // or iPhones don't get fresh data
+});
+
+$.ajax({
+    cache: false,
+    headers: { "cache-control": "no-cache" },
+});*/
