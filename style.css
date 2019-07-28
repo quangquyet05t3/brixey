@@ -378,6 +378,9 @@ header .overlay {
 		display: block;
 		background: #e0e0e0;
 	}
+	#navbar-social {
+		display: none;
+	}
 
 }
 

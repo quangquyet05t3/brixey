@@ -90,7 +90,7 @@
             'walker'          => new WP_Bootstrap_Navwalker()
         ));
         ?>
-        <ul class="navbar-nav mr-auto">
+        <ul id="navbar-social" class="navbar-nav mr-auto">
             <li>
                 <a class="nav-link" href="https://www.facebook.com/txv.architects/">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/fb-icon-sm.png" />

@@ -11,6 +11,7 @@ function register_my_menu() {
 add_action( 'init', 'register_my_menu' );
 
 require_once get_template_directory() . '/vendor/inc/Bootstrap-Navwalker.php';
+require_once get_template_directory() . '/vendor/inc/Footer-Navwalker.php';
 
 
 
