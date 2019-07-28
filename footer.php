@@ -103,7 +103,7 @@
     </div>
 </section>
 
-<section id="footer">
+<!--<section id="footer">
     <div class="container">
         <div class="col">
             <ul class="nav justify-content-center">
@@ -132,6 +132,37 @@
             <div class="row justify-content-md-center">
                 Peng Joon © 2018 - Terms of Use & Privacy Policy
             </div>
+        </div>
+    </div>
+</section>-->
+
+<section id="footer">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div>
+                <a class="nav-link active" href="#">Trang chủ</a>
+            </div>
+            <div>
+                <a class="nav-link" href="#">Dự án</a>
+            </div>
+            <div>
+                <a class="nav-link" href="#">Dịch vụ</a>
+            </div>
+            <div>
+                <a class="nav-link" href="#">Tin tức</a>
+            </div>
+            <div>
+                <a class="nav-link" href="#">Blog</a>
+            </div>
+            <div>
+                <a class="nav-link" href="#">Giới thiệu</a>
+            </div>
+            <div>
+                <a class="nav-link" href="#">Liên hệ</a>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            Peng Joon © 2018 - Terms of Use & Privacy Policy
         </div>
     </div>
 </section>
