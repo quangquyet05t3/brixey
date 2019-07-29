@@ -449,11 +449,21 @@ header .overlay {
 .modal-header h5 {
 	color: #000000;
 }
-/* --------------------- Fix layout for Mobile --------------------- */
-/*section {*/
-	/*margin-right: -30px;*/
-/*}*/
 
-/*#footer img {*/
-	/*margin-right: 15px;*/
-/*}*/
+/* --------------------- Paging navigation --------------------- */
+.page-numbers{
+	position: relative;
+	display: block;
+	padding: .5rem .75rem;
+	margin-left: -1px;
+	line-height: 1.25;
+	color: #007bff;
+	background-color: #fff;
+	border: 1px solid #dee2e6;
+}
+.page-numbers.current{
+	z-index: 1;
+	color: #fff;
+	background-color: #007bff;
+	border-color: #007bff;
+}

@@ -146,7 +146,8 @@ $the_query = new WP_Query($args);
     $query = array(
         'type' => 'post',
         'posts_per_page' => 6,
-        'post__not_in' => get_option( 'sticky_posts' )
+        'post__not_in' => get_option( 'sticky_posts' ),
+        'offset' => 1,
     );
 
     $lastPost = new WP_Query($query);

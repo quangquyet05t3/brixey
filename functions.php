@@ -1,5 +1,11 @@
 <?php
 
+add_theme_support( 'post-thumbnails' );
+/*add_image_size('blog-thumbnail',700, 350, true);
+add_image_size('post-large',900, 600, true);
+add_image_size('post-small',250, 200, true);
+set_post_thumbnail_size( 700, 350 );*/
+
 
 /**
  * Header menu
@@ -76,6 +82,37 @@ function submit_info() {
 }
 add_action( 'wp_ajax_submit_info', 'submit_info' );
 
+
+/*
+	==========================================
+	Pagination
+	==========================================
+*/
+function brixey_pagination($lastBlog) {
+    global $wp_query;
+
+    $pages = paginate_links( array(
+            'current'       => max( 1, get_query_var('paged') ),
+            'total'         => $lastBlog->max_num_pages,
+            'type'          => 'array',
+            'prev_next'     => true,
+            'prev_text'     => __('« Trước'),
+            'next_text'     => __('Sau »'),
+        )
+    );
+
+    if( is_array( $pages ) ) {
+        $paged = ( get_query_var('page') == 0 ) ? 1 : get_query_var('paged');
+        $pagination = '<ul class="pagination justify-content-center mb-4">';
+        foreach ( $pages as $page ) {
+            $pagination .= "<li class='page-item'>$page</li>";
+        }
+        $pagination .= '</ul>';
+
+        echo $pagination;
+
+    }
+}
 
 
 #region ===========FakeData==============
