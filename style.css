@@ -457,13 +457,13 @@ header .overlay {
 	padding: .5rem .75rem;
 	margin-left: -1px;
 	line-height: 1.25;
-	color: #007bff;
+	color: #090601;
 	background-color: #fff;
 	border: 1px solid #dee2e6;
 }
 .page-numbers.current{
 	z-index: 1;
 	color: #fff;
-	background-color: #007bff;
-	border-color: #007bff;
+	background-color: #090601;
+	border-color: #090601;
 }

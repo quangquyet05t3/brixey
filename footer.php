@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-12 col-md-auto">
-                <h3>FOLLOW PENG JOON ON SOCIAL MEDIA</h3>
+                <h3>THEO DÕI CHÚNG TÔI TRÊN MẠNG XÃ HỘI</h3>
             </div>
         </div>
         <div class="row justify-content-around social-area">
@@ -10,7 +10,9 @@
                 <div class="container">
                     <div class="row justify-content-md-center">
                         <div class="col-12 col-md-auto">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-fb.png" />
+                            <a class="nav-link" href="https://www.facebook.com/txv.architects/">
+                                <img src="<?php echo get_template_directory_uri(); ?>/img/icon-fb.png" />
+                            </a>
                         </div>
                     </div>
                     <div class="row justify-content-md-center">
@@ -24,7 +26,9 @@
                 <div class="container">
                     <div class="row justify-content-md-center">
                         <div class="col-12 col-md-auto">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-diagram.png" />
+                            <a class="nav-link" href="https://www.instagram.com/txv.arc">
+                                <img src="<?php echo get_template_directory_uri(); ?>/img/icon-diagram.png" />
+                            </a>
                         </div>
                     </div>
                     <div class="row justify-content-md-center">
@@ -38,7 +42,9 @@
                 <div class="container">
                     <div class="row justify-content-md-center">
                         <div class="col-12 col-md-auto">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-youtube.png" />
+                            <a class="nav-link" href="https://www.youtube.com/watch?v=fbQSFoG8t_8">
+                                <img src="<?php echo get_template_directory_uri(); ?>/img/icon-youtube.png" />
+                            </a>
                         </div>
                     </div>
                     <div class="row justify-content-md-center">
@@ -120,7 +126,7 @@
             ?>
         </div>
         <div class="row justify-content-center">
-            Peng Joon © 2018 - Terms of Use & Privacy Policy
+            Trần Xuân Văn © 2019
         </div>
     </div>
 </section>

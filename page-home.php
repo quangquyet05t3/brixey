@@ -153,12 +153,12 @@ $the_query = new WP_Query($args);
     $index = 1;
     if( $lastPost->have_posts() ):
         while( $lastPost->have_posts() ): $lastPost->the_post(); ?>
-        <?php $sectionId = sprintf('home-%s', $index ); ?>
-        <?php $tempPart = ($index%2==1)? 'template-parts/content-home-left': 'template-parts/content-home-right'; ?>
-            <section id="<?php echo $sectionId; ?>">
-                <?php get_template_part($tempPart, get_post_format()); ?>
-            </section>
-        <?php $index++; ?>
+            <?php $sectionId = sprintf('home-%s', $index ); ?>
+            <?php $tempPart = ($index%2==1)? 'template-parts/content-home-left': 'template-parts/content-home-right'; ?>
+                <section id="<?php echo $sectionId; ?>">
+                    <?php get_template_part($tempPart, get_post_format()); ?>
+                </section>
+            <?php $index++; ?>
         <?php endwhile;
     endif;
     wp_reset_postdata();
