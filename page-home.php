@@ -125,19 +125,22 @@
 
 <!--Meet Peng Joon-->
 <?php
-$args = [
-    'type' => 'post',
-    'posts_per_page' => 1,
-    'post__in'  => get_option( 'sticky_posts' )  // Get article with sticky
-];
-$the_query = new WP_Query($args);
+if(!empty(get_option( 'sticky_posts' ))) {
+    $args = [
+        'type' => 'post',
+        'posts_per_page' => 1,
+        'post__in'  => get_option( 'sticky_posts' )  // Get article with sticky
+    ];
+    $the_query = new WP_Query($args);
+    ?>
+    <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+        <section id="home-one">
+            <?php get_template_part('template-parts/content-sticky', get_post_format()); ?>
+        </section>
+    <?php endwhile; ?>
+    <?php
+}
 ?>
-
-<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-    <section id="home-one">
-        <?php get_template_part('template-parts/content-sticky', get_post_format()); ?>
-    </section>
-<?php endwhile; ?>
 
 <!----------Article--------->
 <?php
