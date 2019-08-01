@@ -25,6 +25,25 @@
             background-size: cover;
             color: white;
         }
+
+        #about {
+            background: url('<?php echo get_template_directory_uri(); ?>/img/bg-about.jpg') center center no-repeat;
+            background-size: cover;
+            color: white;
+        }
+
+        #contact {
+            background: url('<?php echo get_template_directory_uri(); ?>/img/bg-contact.jpg') center center no-repeat;
+            background-size: cover;
+        }
+
+        .contact-text {
+            color: black;
+            background: rgba(255,255,255,0.9);
+            padding: 30px;
+            border-top: solid 10px #dca24b;
+        }
+
         #home-3,  #home-5{
             background: url('<?php echo get_template_directory_uri(); ?>/img/bg-content-1.jpg') center center no-repeat;
             background-size: cover;
