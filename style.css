@@ -468,3 +468,383 @@ header .overlay {
 	border-color: #090601;
 }
 
+
+/* ----------------------- Featured ----------------------------- */
+.featured{
+    background-color: #0f0f0f;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 035px 0px 35px 0px;
+    position: relative;
+    width: 100%;
+}
+.featured:before{
+    content: '';
+    max-width: 495px;
+    height: 683px;
+    display: block;
+    position: absolute;
+    background: url(https://pengjoon.com/wp-content/uploads/iii-before.png) left top no-repeat;
+    background-size: contain;
+    top: -135%;
+    pointer-events: none;
+    width: 27%;
+}
+.featured h2{
+	color: #ffffff;
+    font-size: 22.5px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.featured-box-image{
+	display: inline-block;
+    width: 100%;
+}
+.featured-image {
+    width: 11.11%;
+    float: left;
+    border-style: solid;
+    border-width: 2px 0px 0px 0px;
+    border-color: rgba(0,0,0,0);
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    text-align: center;
+    padding: 10px;
+}
+.featured-image:hover{
+	border-style: solid;
+    border-width: 2px 0px 0px 0px;
+    border-color: #dca24b;
+}
+.featured-image .size-full{
+    height: auto;
+    max-width: 100%;
+    border: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    vertical-align: middle;
+}
+.featured-image .featured-abc{
+	width: 63px;
+	height: 63px;
+}
+.featured-image .featured-idk{
+	width: 93px;
+	height: 54px;
+}
+
+.featured-image .featured-fox{
+	width: 57px;
+	height: 65px;
+}
+
+.featured-image .featured-cbs{
+	width: 111px;
+	height: 34px;
+}
+
+.featured-image .featured-goodday{
+	width: 134px;
+	height: 30px;
+}
+
+.featured-image .featured-sandiego{
+	width: 136px;
+	height: 60px;
+}
+
+.featured-image .featured-nbc{
+	width: 61px;
+	height: 60px;
+}
+
+.featured-image .featured-blend{
+	width: 118px;
+	height: 55px;
+}
+
+.featured-image .featured-foxnews{
+	width: 113px;
+	height: 59px;
+}
+.product-box{
+    overflow: hidden;
+    position: relative;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    direction: ltr;
+    clear: both;
+    display: inline-block;
+}
+.product-box svg{
+    height: 207px;
+    display: block;
+    width: -webkit-calc(100% + 1.3px);
+    width: calc(144% + 1.3px);
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);  
+}
+.product-box .elementor-shape-fill {
+    fill: #0f0f0f;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.product-title{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+}
+.product-title h2{
+    color: #ffffff;
+    font-size: 67px;
+    line-height: 1;
+    font-weight: 600;
+    padding: 20px 0px 50px 0px;
+}
+.blog-post{
+    background-image: url(https://pengjoon.com/wp-content/uploads/2017/12/testimonial-section-bg.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 60px 0px 100px 0px;
+}
+.blog-post h2{
+    color: #ffffff;
+    font-size: 67px;
+    line-height: 1;
+    font-weight: 600;
+    padding: 20px 0px 50px 0px;
+    text-align: center;
+}
+.blog-post_card{
+    margin-bottom: 20px;
+    border-top: 5px solid #f8d777;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
+    background-color: rgba(0,0,0,0);
+    -webkit-transition: all .25s;
+    -o-transition: all .25s;
+    transition: all .25s;
+    border-radius: 3px;
+}
+.blog-post_card:hover{
+    border: 1px solid #f8d777;
+}
+.blog-post_text{
+	padding: 20px 10px;
+    width: 100%;
+}
+.blog-post_title{
+	text-align: center;
+}
+.blog-post_title a{
+    color: #ffffff;
+    font-family: "Roboto", Sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.2em;
+    letter-spacing: 0.2px;
+    margin-bottom: 0;
+    text-decoration: none;
+}
+.blog-post_thumnail img{
+    max-width: 100%;
+    height: 245px;
+    width: 100%;
+}
+.blog-post .read-more{
+	margin: 40px auto 10px;
+    max-width: 275px;
+}
+.blog-post .read-more .btn-light{
+	background: transparent;
+    color: #fff;
+}
+.blog-post .read-more-button button.btn-light:hover{
+    color: #000000;
+    background-color: #ffffff;
+}
+#about-market{
+    background-image: url(../brixey/img/make-product-bg.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 140px 0px 140px 0px;
+    position: relative;
+}
+.about-market_box{
+    background-color: #fff;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 50px 30px;
+}
+.about-market_box h2{
+	color: #000000;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.about-market_box p{
+	color: #000000;
+    font-family: "Roboto", Sans-serif;
+    font-size: 27px;
+    font-weight: 300;
+    padding-bottom: 0;
+}
+.about-market_box p:last-child{
+	font-size: 18px;
+}
+#about .read-more{
+	display: none;
+}
+#about-event{
+    background-image: url(../brixey/img/peng-joon-img.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-style: solid;
+    border-width: 5px 0px 5px 0px;
+    border-color: #ffffff;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 0px 0px 0px 0px;
+    min-height: 727px;
+}
+#about-successfully{
+    background-image: url(../brixey/img/successful-section-bg.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 100px 0px 100px 0px;
+}
+#about-successfully h3{
+    color: #ffffff;
+    font-family: "Playfair Display", Sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.4em;
+}
+#about-successfully h5{
+    color: #ffffff;
+    font-family: "Roboto", Sans-serif;
+    font-size: 27px;
+    font-weight: 300;
+}
+#about-successfully p{
+    color: #ffffff;
+    font-family: "Roboto", Sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+}
+#about-event_time{
+    background-image: url(../brixey/img/peng-joon-img2.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-style: solid;
+    border-width: 5px 0px 5px 0px;
+    border-color: #ffffff;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 0px 0px 0px 0px;
+    min-height: 216px;
+}
+#about-programs{
+    background-image: url(../brixey/img/program-section-bg.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 80px 0px 0px 0px;
+}
+#about-programs h2{
+	color: #000000;
+    font-family: "Playfair Display", Sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.4em;
+    text-align: center;
+    margin: 0px 0px 50px 0px;
+}
+.about-programs_elementor{
+    max-width: 800px;
+    margin: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+.about-programs_elementor img{
+	width: 77px;
+	height: 77px;
+}
+@media (max-width: 580px){
+	.about-programs_elementor .col-sm-3{
+	    width: 100%;
+	    margin-bottom: 20px;
+	}
+	.about-programs_elementor{
+	    display: block;
+	    margin: auto;
+	    text-align: center;
+	}
+}
+
+#about-famous{
+    background-image: url(../brixey/img/famous-pic-collage.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-style: solid;
+    border-width: 5px 0px 5px 0px;
+    border-color: #ffffff;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    padding: 0px 0px 0px 0px;
+    min-height: 200px;
+}
+#about-seemore{
+	margin-bottom: 60px;
+}
+#about-seemore .read-more{
+	margin: auto;
+}
+#about-seemore p{
+	text-align: center;
+}
+@media (max-width: 767px){
+	.featured-image{
+    	width: 33%;
+	}
+	#about-programs{
+		padding: 50px 20px 0px 20px;
+	}
+	.about-programs_box h2, .about-market_box p, #about-successfully h5{
+		font-size: 20px !important;
+	}
+	#about-seemore{
+		padding: 0 20px;
+	}
+	.about-market_box h2, #about-successfully h3{
+		font-size: 24px;
+	}
+	#about-successfully, #about-market{
+		padding: 30px 20px;
+	}
+}

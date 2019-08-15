@@ -142,6 +142,70 @@ if(!empty(get_option( 'sticky_posts' ))) {
 }
 ?>
 
+<!----------Featured--------->
+
+<section class="featured">
+    <div class="container">
+        <h2 class="featured-title">Nổi bật</h2>
+        <div class="featured-box-image">
+            <div class="featured-image">
+                <a href="">
+                    <img src="https://pengjoon.com/wp-content/uploads/2017/12/abc-icon.png" class="featured-abc size-full" alt="">
+                </a>
+            </div>
+            <div class="featured-image">
+                <a href="">
+                    <img src="https://pengjoon.com/wp-content/uploads/2017/12/idk-icon.png" class="featured-idk size-full" alt="">
+                </a>
+            </div>
+            <div class="featured-image">
+                <a href="">
+                    <img src="https://pengjoon.com/wp-content/uploads/2017/12/fox-news-icon.png" class="featured-fox size-full" alt="">
+                </a>
+            </div>
+            <div class="featured-image">
+                <a href="">
+                    <img src="https://pengjoon.com/wp-content/uploads/2017/12/cbs-icon.png" class="featured-cbs size-full" alt="">
+                </a>
+            </div>
+            <div class="featured-image">
+                <a href="">
+                    <img src="https://pengjoon.com/wp-content/uploads/2017/12/good-day-icon.png" class="featured-goodday size-full" alt="">
+                </a>
+            </div>
+            <div class="featured-image">
+                <a href="">
+                    <img src="https://pengjoon.com/wp-content/uploads/2017/12/san-diego-living-icon.jpg" class="featured-sandiego size-full" alt="">
+                </a>
+            </div>
+            <div class="featured-image">
+                <a href="">
+                    <img src="https://pengjoon.com/wp-content/uploads/2017/12/nbc-icon.jpg" class="featured-nbc size-full" alt="">
+                </a>
+            </div>
+            <div class="featured-image">
+                <a href="">
+                    <img src="https://pengjoon.com/wp-content/uploads/2017/12/the-morning-blend-icon.png" class="featured-blend size-full" alt="">
+                </a>
+            </div>
+            <div class="featured-image">
+                <a href="">
+                    <img src="https://pengjoon.com/wp-content/uploads/2017/12/fox-news-sandiego-icon.png" class="featured-foxnews size-full" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="product-box">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+        <path class="elementor-shape-fill" d="M500,98.9L0,6.1V0h1000v6.1L500,98.9z"></path>
+    </svg>
+    <div class="product-title">
+        <h2>Sản phẩm</h2>
+    </div>
+</div>
 <!----------Article--------->
 <?php
     wp_reset_postdata();
@@ -207,4 +271,123 @@ if(!empty(get_option( 'sticky_posts' ))) {
         </div>
     </div>
 </div>
+<section class="blog-post">
+    <div class="container">
+        <h2>Bài viết mới</h2>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 blog-post-box">
+                <div class="blog-post_card">
+                    <a href="">
+                        <div class="blog-post_thumnail">
+                            <img src="https://pengjoon.com/wp-content/uploads/13-1.jpg" class="" alt="">
+                        </div>
+                    </a>
+                    <div class="blog-post_text">
+                        <h3 class="blog-post_title">
+                            <a href="">
+                                What I Believe
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 blog-post-box">
+                <div class="blog-post_card">
+                    <a href="">
+                        <div class="blog-post_thumnail">
+                            <img src="https://pengjoon.com/wp-content/uploads/12-1.jpg" class="" alt="">
+                        </div>
+                    </a>
+                    <div class="blog-post_text">
+                        <h3 class="blog-post_title">
+                            <a href="">
+                                7 Figures and Still Poor
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 blog-post-box">
+                <div class="blog-post_card">
+                    <a href="">
+                        <div class="blog-post_thumnail">
+                            <img src="https://pengjoon.com/wp-content/uploads/2017/03/feat-post-thumb2.jpg" class="" alt="">
+                        </div>
+                    </a>
+                    <div class="blog-post_text">
+                        <h3 class="blog-post_title">
+                            <a href="">
+                                When Should I Quit My Job?
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 blog-post-box">
+                <div class="blog-post_card">
+                    <a href="">
+                        <div class="blog-post_thumnail">
+                            <img src="https://pengjoon.com/wp-content/uploads/2018/01/Peng-Joon-on-Fox-5-San-Diego.jpg" class="" alt="">
+                        </div>
+                    </a>
+                    <div class="blog-post_text">
+                        <h3 class="blog-post_title">
+                            <a href="">
+                                What Is Wrong With My Name?
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 blog-post-box">
+                <div class="blog-post_card">
+                    <a href="">
+                        <div class="blog-post_thumnail">
+                            <img src="https://pengjoon.com/wp-content/uploads/Thailand.jpg" class="" alt="">
+                        </div>
+                    </a>
+                    <div class="blog-post_text">
+                        <h3 class="blog-post_title">
+                            <a href="">
+                                What I Did That You Don’t Want To Do
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 blog-post-box">
+                <div class="blog-post_card">
+                    <a href="">
+                        <div class="blog-post_thumnail">
+                            <img src="https://pengjoon.com/wp-content/uploads/Tony-Robbins.jpg" class="" alt="">
+                        </div>
+                    </a>
+                    <div class="blog-post_text">
+                        <h3 class="blog-post_title">
+                            <a href="">
+                                Pay The Price or Be Average
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="read-more">
+        <div class="container">
+            <div class="row">
+                <div class="read-more-arrow">
+                    <div class="arrow icon">
+                    </div>
+                </div>
+                <div class="read-more-button">
+                    <a href="https://tranxuanvan.com/the-5-secrets-to-pulling-off-simple-minimal-design/">
+                        <button type="button" class="btn btn-light">Xem thêm bài viết mới</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>    
+    </div>
+
+</section>
 <?php get_footer() ?>
