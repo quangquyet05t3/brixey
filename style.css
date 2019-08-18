@@ -357,6 +357,9 @@ header .overlay {
 	#form-header {
 		display: none;
 	}
+	.container {
+		width: 1200px !important;
+	}
 }
 @media screen and ( max-width : 991px ) {
 	#image {
@@ -382,7 +385,7 @@ header .overlay {
 		display: none;
 	}
 	.blog-article {
-		height: 430px !important;
+		height: 500px !important;
 	}
 	.blog-share {
 		margin-top: 10px;
@@ -855,3 +858,6 @@ header .overlay {
 		padding: 30px 20px;
 	}
 }
+
+
+
