@@ -464,18 +464,26 @@ header .overlay {
 .page-numbers{
 	position: relative;
 	display: block;
-	padding: .5rem .75rem;
-	margin-left: -1px;
+	padding: .7rem .95rem;
+	margin-left: 5px;
 	line-height: 1.25;
 	color: #090601;
 	background-color: #fff;
-	border: 1px solid #dee2e6;
+	border: 2px solid #daa34c;
 }
+
+.page-numbers:hover{
+	z-index: 1;
+	color: #fff;
+	background-color: #daa34c;
+	border-color: #daa34c;
+}
+
 .page-numbers.current{
 	z-index: 1;
 	color: #fff;
-	background-color: #090601;
-	border-color: #090601;
+	background-color: #daa34c;
+	border-color: #daa34c;
 }
 
 
