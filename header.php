@@ -13,6 +13,7 @@
     <link href="<?php echo get_template_directory_uri() ?>/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" >
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/quyet.css" >
 
     <!--<script src="<?php /*echo get_template_directory_uri() */?>/vendor/jquery/dist/jquery.min.js"></script>-->
 
@@ -68,6 +69,24 @@
         #content h5 {
             color: black;
 
+        }
+
+
+        #blog {
+            background: url('<?php echo get_template_directory_uri(); ?>/img/bg-blog.jpg') center center no-repeat;
+            background-size: cover;
+            color: white;
+            height: 100%;
+            width: 100%;
+        }
+
+        .blog-article {
+            height: 310px;
+            border: #d49d48 solid 2px;
+            background: url('<?php echo get_template_directory_uri(); ?>/img/bg-blog-content.jpg') center center no-repeat;
+            margin-bottom: 27px;
+            color: white;
+            padding: 50px 45px 45px 50px;
         }
 
         /*-----------------Arrow button----------------*/

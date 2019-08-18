@@ -381,6 +381,13 @@ header .overlay {
 	#navbar-social {
 		display: none;
 	}
+	.blog-article {
+		height: 430px !important;
+	}
+	.blog-share {
+		margin-top: 10px;
+		margin-left: 0px;
+	}
 
 }
 
