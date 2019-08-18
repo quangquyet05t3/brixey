@@ -19,7 +19,11 @@
 }
 
 #blog-right {
-    background: #0A246A;
+    /*background: #0A246A;*/
+}
+
+#blog-right h1 {
+    font-weight: bold;
 }
 
 .nav-link-blog {
@@ -33,4 +37,21 @@
 
 .more-link:hover {
     background: #daa24b;
+}
+
+.blog-share h4 {
+    font-weight: bold;
+    margin-right: 5px !important;
+    margin-bottom: 40px !important;
+}
+
+.row-right {
+    margin-top: 20px !important;
+}
+
+.blog-right {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+    padding-bottom: 26px;
+    border-bottom: #000 solid 1px;
 }
