@@ -15,7 +15,7 @@
             <div class="row">
                 <div id="blog-left" class="col-lg-8">
                     <div class="row">
-                        <?php for($i=0; $i<=5; $i++) : ?>
+                        <?php for($i=0; $i<=2; $i++) : ?>
                             <div class="col-lg-12">
                                 <div class="blog-article">
                                     <div class="row">
@@ -30,10 +30,10 @@
                                                 <div class="col-lg-4">
                                                     <div class="more-link">
                                                         <div class="row justify-content-start">
-                                                            <div style="padding: 8px 0px 8px 48px;" class="col-6">
+                                                            <div style="padding: 8px 0px 8px 48px;" class="col col-md-auto">
                                                                 Đọc tiếp
                                                             </div>
-                                                            <div class="col-2">
+                                                            <div class="col col-md-auto">
                                                                 <div class="arrow icon" style="margin-top: 14px;">
                                                                 </div>
                                                             </div>
@@ -62,6 +62,26 @@
                                 </div>
                             </div>
                         <?php endfor;  ?>
+
+
+
+
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <?php
+
+                        $args = array(
+                            'post_type' => 'post',
+                            'category_name' => $category_name,
+                            'posts_per_page' => $post_per_page,
+                            'paged' => $paged,
+                        );
+                        $lastBlog = new WP_Query($args);
+
+                        ?>
+
+                        <?php brixey_pagination($lastBlog) ?>
                     </div>
                 </div>
 
@@ -70,13 +90,13 @@
                         <div class="col-sm-12">
                             <h1>Recent Posts</h1>
                         </div>
-                        <?php for($i=0;$i<=10;$i++) : ?>
+                        <?php for($i=0;$i<=5;$i++) : ?>
                             <div class="col-sm-12">
-                                <div class="row row-right">
-                                    <div class="col-sm-3">
+                                <div class="row justify-content-md-center row-right">
+                                    <div class="col col-lg-3">
                                         <img src="/wp-content/uploads/2019/08/blog-avatar.jpg" width="70" height="70">
                                     </div>
-                                    <div class="col-sm-9">
+                                    <div class="col-9 col-md-auto">
                                         <h6>
                                             The Reason Why I Played A Bigger Game
                                         </h6>
@@ -89,6 +109,15 @@
                                 </div>
                             </div>
                         <?php endfor; ?>
+
+                        <div class="col-sm-12 p-3">
+                            <h1>Tìm kiếm</h1>
+                            <div class="flex-container">
+                                <input class="form-control input-field" type="search" placeholder="Tìm kiếm">
+                                <button type="submit"><img src="<?php echo get_template_directory_uri(); ?>/img/search-btn.jpg" alt="Search Icon"></button>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>

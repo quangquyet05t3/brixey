@@ -32,6 +32,7 @@
 
 .more-link {
     border: #daa24b solid 2px;
+    width: 172px;
     /*padding: 8px 35px 8px 35px;*/
 }
 
@@ -54,4 +55,17 @@
     margin-right: 15px !important;
     padding-bottom: 26px;
     border-bottom: #000 solid 1px;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.input-field {
+    flex: 1;
+}
+
+.flex-container button {
+    border: none;
+    padding: 0;
 }
