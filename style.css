@@ -846,6 +846,214 @@ header .overlay {
 #about-seemore p{
 	text-align: center;
 }
+#media-banner, #testimonials-banner{
+    background-image: url(../brixey/img/bg-about.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 250px 0px 250px 0px;
+}
+#media-banner h3, #testimonials-banner h3{
+    color: #ffffff;
+    font-family: "Playfair Display", Sans-serif;
+    font-size: 95px;
+    font-weight: 700;
+    line-height: 1;
+}
+#media-press{
+    background-image: url(../brixey/img/media-sect2-bg.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 50px 20px 60px 20px;
+}
+#media-press h2{
+	color: #c0762d;
+    font-family: "Playfair Display", Sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    font-size: 40px;
+}
+#media-press h3{
+    color: #000000;
+    font-family: "Roboto", Sans-serif;
+    font-size: 27px;
+    line-height: 1;
+    font-weight: 300;
+    line-height: 1.2em;
+}
+.media-press_title, .media-press_img{
+	margin: auto;
+	text-align: center;
+}
+.media-press_img h2{
+    display: inline-block;
+    z-index: 1;
+    padding: 0 20px;
+    position: relative;
+    color: #000 !important;
+    position: relative;
+    -js-display: flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+}
+.media-press_img b{
+    display: block;
+    -ms-flex: 1;
+    flex: 1;
+    height: 1px;
+    background-color: #000;
+}
+.media-press_img span{
+    text-align: center;
+    padding: 0 20px;
+}
+.media-press_img{
+	position: relative;
+	width: 100%;
+	margin-top: 50px;
+}
+/*.media-press_img span{
+    border-bottom: 1px solid #000;
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 60%;
+}*/
+.avatar-bg{
+    background-image: url(../brixey/img/media-bio-bg.jpg);
+    background-position: top center;
+    background-size: cover;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 0px 10px 0px 10px;
+}
+.avatar{
+    margin: -90px 0px 0px 0px;
+}
+.media-press-avatar{
+	margin-top: 100px;
+}
+.media-press-avatar .text{
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #fdf6e4 0%, #ffffff 40%);
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 30px 30px 30px 30px;
+}
+#media-photo{
+    background-image: url(../brixey/img/make-product-bg.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 80px 0px 80px 0px;
+}
+.media-poto_banner{
+    background-image: url(../brixey/img/famous-pic-collage.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-style: solid;
+    border-width: 5px 0px 5px 0px;
+    border-color: #ffffff;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    min-height: 200px;
+}
+#media-photo .read-more{
+	margin: auto;
+}
+.media-logo{
+	margin-bottom: 20px;
+}
+.media-logo a{
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 216px;
+    border: 2px solid transparent;
+    background: #fff;
+}
+.media-logo-box .media-press_img, .media-video .media-press_img, #media-photo .media-press_img {
+	margin-top: 0;
+}
+.media-video-box{
+    border-style: solid;
+    border-color: #dfab53;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.media-video-box iframe{
+	width: 100%;
+}
+.media-video-text{
+    padding: 28px 28px 28px 28px;
+    background-image: url(https://pengjoon.com/wp-content/uploads/2017/12/video-title-bg-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+}
+.media-video-text h2{
+    color: #000000;
+    font-family: "Playfair Display", Sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+}
+#testimonials-video_all{
+	padding: 80px 0px 50px;
+}
+#testimonials-video_all, #testimonials-video, #testimonials-video-1, #testimonials-video-2{
+    background-color: #f4f4f4; 
+}
+#testimonials-video_all .media-video-box, #testimonials-video .media-video-box,
+ #testimonials-video-1 .media-video-box, #testimonials-video-2 .media-video-box{
+	margin-bottom: 40px;
+}
+#testimonials-video_all .media-press_img, #testimonials-video .media-press_img, #testimonials-video-1 .media-press_img, #testimonials-video-2 .media-press_img{
+    margin-top: 0; 
+}
+#testimonials-video_all .media-press_img h2, #testimonials-video .media-press_img h2,
+ #testimonials-video-1 .media-press_img h2, #testimonials-video-2 .media-press_img h2{
+    margin-bottom: 40px;
+}
+#testimonials-video_all .media-video-text, #testimonials-video .media-video-text, 
+#testimonials-video-1 .media-video-text, #testimonials-video-2 .media-video-text{
+	text-align: left;
+	position: relative;
+	padding: 28px 0 28px 0;
+}
+#testimonials-video_all .media-video-text h2, #testimonials-video .media-video-text h2, 
+#testimonials-video-1 .media-video-text h2, #testimonials-video-2 .media-video-text h2{
+    padding-left: 30px;
+    font-size: 19px;
+    margin-bottom: 0;
+}
+.media-video-text:before, .media-video-text:before, 
+.media-video-text:before, .media-video-text:before{
+    position: absolute;
+    content: '';
+    background-image: url(https://pengjoon.com/wp-content/uploads/2017/12/gradient-overlay.png);
+    background-repeat: no-repeat;
+    width: 307px;
+    height: 45px;
+    background-position: left center;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    left: 0;
+}
 @media (max-width: 767px){
 	.featured-image{
     	width: 33%;
@@ -865,7 +1073,8 @@ header .overlay {
 	#about-successfully, #about-market{
 		padding: 30px 20px;
 	}
+	#media-banner h3, #testimonials-banner h3{
+		font-size: 48px;
+		text-align: center;
+	}
 }
-
-
-

@@ -80,6 +80,14 @@
             width: 100%;
         }
 
+        #project {
+            background: url('<?php echo get_template_directory_uri(); ?>/img/bg-du-an.jpg') center center no-repeat;
+            background-size: cover;
+            color: white;
+            height: 100%;
+            width: 100%;
+        }
+
         .blog-article {
             height: 310px;
             border: #d49d48 solid 2px;
