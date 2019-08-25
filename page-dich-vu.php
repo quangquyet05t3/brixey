@@ -17,7 +17,7 @@
         <path class="elementor-shape-fill" d="M500,98.9L0,6.1V0h1000v6.1L500,98.9z"></path>
     </svg>
     <div class="product-title">
-        <h2>Sản phẩm</h2>
+        <h3>Sản phẩm</h3>
     </div>
 </div>
 

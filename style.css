@@ -330,7 +330,10 @@ header .overlay {
 	color: #fff;
 }
 
-/* ----------------------Section Home One------------------------ */
+.read-more-services {
+	max-width: 245px;
+}
+	/* ----------------------Section Home One------------------------ */
 #home-one .home-content {
 	padding-top: 60px;
 }
@@ -629,6 +632,13 @@ header .overlay {
     line-height: 1;
     font-weight: 600;
     padding: 20px 0px 50px 0px;
+}
+.product-title h3{
+	color: #ffffff;
+	font-size: 67px;
+	line-height: 1;
+	font-weight: 600;
+	padding: 50px 0px 50px 0px;
 }
 .blog-post{
     background-image: url(https://pengjoon.com/wp-content/uploads/2017/12/testimonial-section-bg.jpg);

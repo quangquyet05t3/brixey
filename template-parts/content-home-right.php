@@ -26,8 +26,16 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <?php the_post_thumbnail('post-small',['class'=>'mr-3 post-small img-thumbnail']) ?>
-                <!--<img src="<?php /*echo get_template_directory_uri(); */?>/img/article-img.png" alt="macbook">-->
+                <?php
+                $image = get_the_post_thumbnail();
+                if(empty($image)) {
+                    $image = '<img width="1920" height="1080" src="'.get_template_directory_uri().'/img/no-image.png'.'" class="mr-3 post-small img-thumbnail wp-post-image" alt="" srcset="http://cacanh.local/wp-content/uploads/2017/06/zoom-image-5.jpg 1920w, http://cacanh.local/wp-content/uploads/2017/06/zoom-image-5-300x169.jpg 300w, http://cacanh.local/wp-content/uploads/2017/06/zoom-image-5-768x432.jpg 768w, http://cacanh.local/wp-content/uploads/2017/06/zoom-image-5-1024x576.jpg 1024w" sizes="(max-width: 1920px) 100vw, 1920px">';
+                    echo $image;
+                } else {
+                    the_post_thumbnail('post-small',['class'=>'mr-3 post-small img-thumbnail']);
+                }
+
+                ?>
             </div>
         </div>
     </div>
