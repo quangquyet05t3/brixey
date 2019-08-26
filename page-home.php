@@ -150,12 +150,12 @@ if(!empty(get_option( 'sticky_posts' ))) {
         <div class="featured-box-image">
             <div class="featured-image">
                 <a href="">
-                    <img src="https://pengjoon.com/wp-content/uploads/2017/12/abc-icon.png" class="featured-abc size-full" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo1.jpg" class="featured-abc size-full" alt="">
                 </a>
             </div>
             <div class="featured-image">
                 <a href="">
-                    <img src="https://pengjoon.com/wp-content/uploads/2017/12/idk-icon.png" class="featured-idk size-full" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo2.jpg" class="featured-idk size-full" alt="">
                 </a>
             </div>
             <div class="featured-image">
