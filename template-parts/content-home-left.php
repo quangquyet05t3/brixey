@@ -18,7 +18,7 @@
             <div class="col-lg-6">
                 <h3><?php echo get_the_title(); ?></h3>
                 <h4>
-                    <?php echo wp_trim_words(get_the_content(), 20) ?>
+                    <?php echo wp_trim_words(get_the_content(), 35) ?>
                 </h4>
                 <p class="lead">
                     <?php /*echo wp_trim_words(get_the_content(), 12) */?>

@@ -1,10 +1,10 @@
 <?php
 
 add_theme_support( 'post-thumbnails' );
-/*add_image_size('blog-thumbnail',700, 350, true);
-add_image_size('post-large',900, 600, true);
-add_image_size('post-small',250, 200, true);
-set_post_thumbnail_size( 700, 350 );*/
+add_image_size('blog-thumbnail',666, 632, true);
+add_image_size('post-large',900, 800, true);
+add_image_size('post-small',570, 400, true);
+set_post_thumbnail_size( 570, 400 );
 
 
 /**

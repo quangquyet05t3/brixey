@@ -559,37 +559,37 @@ header .overlay {
 
 .featured-image .featured-fox{
 	width: 57px;
-	height: 65px;
+	height: 57px;
 }
 
 .featured-image .featured-cbs{
 	width: 111px;
-	height: 34px;
+	height: 54px;
 }
 
 .featured-image .featured-goodday{
 	width: 134px;
-	height: 30px;
+	height: 54px;
 }
 
 .featured-image .featured-sandiego{
 	width: 136px;
-	height: 60px;
+	height: 54px;
 }
 
 .featured-image .featured-nbc{
 	width: 61px;
-	height: 60px;
+	height: 61px;
 }
 
 .featured-image .featured-blend{
 	width: 118px;
-	height: 55px;
+	height: 54px;
 }
 
 .featured-image .featured-foxnews{
 	width: 113px;
-	height: 59px;
+	height: 54px;
 }
 .product-box{
     overflow: hidden;
@@ -1064,7 +1064,104 @@ header .overlay {
     margin: auto 0;
     left: 0;
 }
+.contact-f{
+    background-image: url(../brixey/img/contact-form-bg.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+}
+#contact .row{
+	margin: auto;
+	display: block;
+}
+.contact-text{
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+	background: #fff !important;
+}
+#contact-f .section-content{
+	margin-top: -300px;
+}
+.contact-text h2, .contact-text h3{
+	text-align: center;
+}
+.contact-text p:nth-child(3) {
+    width: 50%;
+    float: left;
+    padding: 20px;
+    border-right: 1px solid #000;
+}
+.contact-text p:nth-child(4) {
+    width: 50%;
+    float: left;
+    padding: 20px;
+}
+.contact-text p:nth-child(n+5) {
+    width: 100%;
+    display: block;
+    clear: both;
+    padding: 20px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.hire{
+    background-image: url(../brixey/img/hire-peng-bg.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 50px;
+    width: 100%;
+    background-size: cover;
+}
+.hire h2, .hire h3, .hire span{
+	text-align: center;
+	display: block;
+}
+.hire h2{
+	text-transform: uppercase;
+}
+.hire span{
+	padding-bottom: 20px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dca24b;
+  text-align: left;
+  padding: 8px;
+}
+td:nth-child(1){
+	background-color: rgba(220,162,75,0.2);
+}
+td strong{
+	color: #dca24b;
+}
+#contact-img{
+	background-image: url(../brixey/img/contact-images.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-style: solid;
+    border-width: 10px 10px 10px 10px;
+    border-color: #ffffff;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    height: auto;
+    min-height: 371px;
+}
 @media (max-width: 767px){
+	#social .col-lg-2{
+		width: 33.3%;
+	}
+	#social .col-lg-2 .container{
+		padding: 0;
+	}
+	.social-area h5{
+		font-size: 8px;
+	}
 	.featured-image{
     	width: 33%;
 	}

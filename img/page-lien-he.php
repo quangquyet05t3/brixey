@@ -43,15 +43,12 @@
                             <td><strong>$50,000</strong> for 2 days</td>
                           </tr>
                         </table>
-                        <span>** prices quoted are in USD.</span>
+                        <p>** prices quoted are in USD.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
-<section id="contact-img">
-    
 </section>
 
 <?php get_footer() ?>

@@ -99,3 +99,7 @@
 .news-img {
    padding: 12px;
 }
+
+.img-thumbnail {
+    border: none !important;
+}
