@@ -10,7 +10,7 @@
                         srcset="'.get_template_directory_uri().'/img/no-image.png'.' 1920w, '.get_template_directory_uri().'/img/no-image.png'.'-300x169.jpg 300w, '.get_template_directory_uri().'/img/no-image.png'.'-768x432.jpg 768w, '.get_template_directory_uri().'/img/no-image.png'.'-1024x576.jpg 1024w" sizes="(max-width: 1920px) 100vw, 1920px">';
                         echo $image;
                     } else {
-                        the_post_thumbnail('post-small',['class'=>'mr-3 post-small img-thumbnail']);
+                        the_post_thumbnail('post-small',['class'=>'']);
                     }
 
                 ?>

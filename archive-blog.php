@@ -1,21 +1,4 @@
 <?php get_header() ?>
-<?php
-
-$args = array('post_type' => 'blog', 'posts_per_page' => 3 );
-$loop = new WP_Query( $args );
-
-if( $loop->have_posts() ):
-
-    while( $loop->have_posts() ): $loop->the_post(); ?>
-
-        <?php the_title(); ?>
-        <br>
-
-    <?php endwhile;
-
-endif;
-die;
-?>
 
 <section id="blog">
     <div class="container">
@@ -32,73 +15,26 @@ die;
         <div class="container">
             <div class="row">
                 <div id="blog-left" class="col-lg-8">
+                    <?php
+                    $args = array('post_type' => 'blog', 'posts_per_page' => 6 );
+                    $lastBlog = new WP_Query( $args );
+                    ?>
                     <div class="row">
-                        <?php for($i=0; $i<=2; $i++) : ?>
-                            <div class="col-lg-12">
-                                <div class="blog-article">
-                                    <div class="row">
-                                        <div class="col-lg-11">
-                                            <h3>The Reason Why I Played A Bigger Game</h3>
-                                            <p>
-                                                We all have a reason why we do what we do. My parents are one of the reasons that I constantly choose to play a bigger game. They were at my 5 day retreat in Bali recently. What makes me proudest is having my parents sitting at the …
-                                            </p>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div class="row">
-                                                <div class="col-lg-4">
-                                                    <div class="more-link">
-                                                        <div class="row justify-content-start">
-                                                            <div style="padding: 8px 0px 8px 48px;" class="col col-md-auto">
-                                                                Đọc tiếp
-                                                            </div>
-                                                            <div class="col col-md-auto">
-                                                                <div class="arrow icon" style="margin-top: 14px;">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-4"></div>
-                                                <div class="col-lg-4">
-                                                    <div class="row blog-share">
-                                                        <h4>Share:  </h4>
-                                                        <a class="nav-link-blog" href="https://www.facebook.com/txv.architects/">
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/img/fb-blog-icon.jpg" />
-                                                        </a>
-                                                        <a class="nav-link-blog" href="https://www.instagram.com/txv.arc">
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-blog-twitter.png" />
-                                                        </a>
-                                                        <a class="nav-link-blog" href="https://www.youtube.com/watch?v=fbQSFoG8t_8">
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/img/icon-blog-google-plus.png" />
-                                                        </a>
-                                                    </div>
+                        <?php
+                        if( $lastBlog->have_posts() ):
 
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php endfor;  ?>
-
-
-
-
+                            while( $lastBlog->have_posts() ): $lastBlog->the_post(); ?>
+                                <?php
+                                    $url_blog = get_the_post_thumbnail_url(null, 'blog-thumbnail');
+                                    set_query_var( 'url_blog', $url_blog );
+                                    get_template_part('template-parts/content-archive-blog', get_post_format());
+                                ?>
+                            <?php endwhile;
+                        endif;
+                        ?>
                     </div>
 
                     <div class="row justify-content-center">
-                        <?php
-
-                        $args = array(
-                            'post_type' => 'post',
-                            'category_name' => $category_name,
-                            'posts_per_page' => $post_per_page,
-                            'paged' => $paged,
-                        );
-                        $lastBlog = new WP_Query($args);
-
-                        ?>
-
                         <?php brixey_pagination($lastBlog) ?>
                     </div>
                 </div>

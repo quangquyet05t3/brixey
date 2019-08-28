@@ -100,10 +100,11 @@
         .blog-article {
             height: 310px;
             border: #d49d48 solid 2px;
-            background: url('<?php echo get_template_directory_uri(); ?>/img/bg-blog-content.jpg') center center no-repeat;
+            opacity: 0.7;
             margin-bottom: 27px;
             color: white;
             padding: 50px 45px 45px 50px;
+            background: #0D99FB !important;
         }
 
         /*-----------------Arrow button----------------*/
