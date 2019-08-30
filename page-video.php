@@ -17,6 +17,7 @@ $lastBlog = new WP_Query($args);
 if( $lastBlog->have_posts() ):
     while( $lastBlog->have_posts() ): $lastBlog->the_post(); ?>
         <?php
+            $current_year = date('Y', time());
             list(, , $year) = explode('/', get_the_date());
             $list_video[$year][] = array(
                 'title' => get_the_title(),
@@ -46,6 +47,13 @@ wp_reset_postdata();
 <section id="testimonials-video_all">
 	<div class="container">
 		<div class="row">
+            <?php if(isset($list_video[$current_year])) : ?>
+                <?php foreach ($list_video[$current_year] as $item) : ?>
+                   <!-- --><?php /*echo $item['title']; */?>
+                <?php endforeach; ?>
+            <?php endif; ?>
+
+
 			<div class="col-lg-6">
 				<div class="media-video-box">
 					<iframe height="315" src="https://www.youtube.com/embed/oMcIcEiOtmc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
