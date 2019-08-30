@@ -31,6 +31,7 @@
                                 ?>
                             <?php endwhile;
                         endif;
+                        wp_reset_postdata();
                         ?>
                     </div>
 
@@ -44,25 +45,42 @@
                         <div class="col-sm-12">
                             <h1>Recent Posts</h1>
                         </div>
-                        <?php for($i=0;$i<=5;$i++) : ?>
-                            <div class="col-sm-12">
-                                <div class="row justify-content-md-center row-right">
-                                    <div class="col col-lg-3">
-                                        <img src="/wp-content/uploads/2019/08/blog-avatar.jpg" width="70" height="70">
-                                    </div>
-                                    <div class="col-9 col-md-auto">
-                                        <h6>
-                                            The Reason Why I Played A Bigger Game
-                                        </h6>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-12 blog-right">
 
+                        <?php
+                        $args = array('post_type' => 'blog', 'posts_per_page' => 10 );
+                        $recentBlog = new WP_Query( $args );
+                        ?>
+                        <?php
+                        if( $recentBlog->have_posts() ):
+
+                            while( $recentBlog->have_posts() ): $recentBlog->the_post(); ?>
+                                <?php
+                                $url_blog = get_the_post_thumbnail_url(null, 'blog-small');
+                                ?>
+
+                                <div class="col-sm-12">
+                                    <div class="row justify-content-md-start row-right">
+                                        <div class="col col-lg-3">
+                                            <img src="<?php echo $url_blog; ?>" width="70" height="70">
+                                        </div>
+                                        <div class="col-9">
+                                            <h6>
+                                                <a href="<?php the_permalink() ?>">
+                                                    <?php the_title(); ?>
+                                                </a>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 blog-right">
+
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        <?php endfor; ?>
+                            <?php endwhile;
+                        endif;
+                        wp_reset_postdata();
+                        ?>
 
                         <div class="col-sm-12 p-3">
                             <h1>Tìm kiếm</h1>

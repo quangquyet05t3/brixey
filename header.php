@@ -62,8 +62,6 @@
             align-items: center;
         }
         #content {
-            background: url('<?php echo get_template_directory_uri(); ?>/img/bg-single.jpg') center center no-repeat;
-            background-size: cover;
             color: black;
         }
         #content h5 {
@@ -104,7 +102,7 @@
             margin-bottom: 27px;
             color: white;
             padding: 50px 45px 45px 50px;
-            background: #0D99FB !important;
+            content
         }
 
         /*-----------------Arrow button----------------*/

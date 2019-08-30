@@ -1,6 +1,6 @@
 <div class="col-lg-12">
     <?php
-        $background = "background: url('.$url_blog.') center center no-repeat !important;";
+        $background = "background: url('".$url_blog."') center center no-repeat !important;";
         if(!$url_blog) {
             $background = "background: #0D99FB !important;";
         }

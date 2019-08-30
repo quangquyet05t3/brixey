@@ -1,9 +1,41 @@
 <?php get_header() ?>
+
+<?php
+
+$category_name = 'video';
+$paged = ( get_query_var('paged') == 0 ) ? 1 : get_query_var('paged');
+$post_per_page = 10;
+
+$list_video = array();
+
+$args = array(
+    'post_type' => 'post',
+    'category_name' => $category_name,
+    'posts_per_page' => $post_per_page
+);
+$lastBlog = new WP_Query($args);
+if( $lastBlog->have_posts() ):
+    while( $lastBlog->have_posts() ): $lastBlog->the_post(); ?>
+        <?php
+            list(, , $year) = explode('/', get_the_date());
+            $list_video[$year][] = array(
+                'title' => get_the_title(),
+                'link_youtube' => get_field('link_youtube')
+            );
+        ?>
+    <?php endwhile;
+endif;
+wp_reset_postdata();
+?>
+
+
+
+
 <section id="testimonials-banner">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8">
-                <h3>Testimonials</h3>
+                <h3>Video</h3>
             </div>
             <div class="col-lg-4">
 
