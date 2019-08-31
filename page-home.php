@@ -213,7 +213,8 @@ if(!empty(get_option( 'sticky_posts' ))) {
     $query = array(
         'type' => 'post',
         'posts_per_page' => 6,
-        'post__not_in' => get_option( 'sticky_posts' )
+        'post__not_in' => get_option( 'sticky_posts' ),
+        'category__not_in' => array(27)
     );
 
     $lastPost = new WP_Query($query);
@@ -225,11 +226,65 @@ if(!empty(get_option( 'sticky_posts' ))) {
                 <section id="<?php echo $sectionId; ?>">
                     <?php get_template_part($tempPart, get_post_format()); ?>
                 </section>
+                <section id="<?php echo $sectionId,'-mobile '; ?>">
+                    <?php get_template_part('template-parts/content-home-mobile', get_post_format()); ?>
+                </section>
             <?php $index++; ?>
         <?php endwhile;
     endif;
     wp_reset_postdata();
 ?>
+
+<section class="blog-post">
+    <div class="container">
+        <h2>Blog mới</h2>
+        <div class="row">
+            <?php
+            $args = array('post_type' => 'blog', 'posts_per_page' => 6 );
+            $lastBlog = new WP_Query($args);
+            if( $lastBlog->have_posts() ):
+                while( $lastBlog->have_posts() ): $lastBlog->the_post(); ?>
+                    <?php $url_blog = get_the_post_thumbnail_url(null, 'blog-medium'); ?>
+                    <div class="col-lg-4 col-md-6 blog-post-box">
+                        <div class="blog-post_card">
+                            <a href="">
+                                <div class="blog-post_thumnail">
+                                    <img src="<?php echo $url_blog; ?>" class="" alt="">
+                                </div>
+                            </a>
+                            <div class="blog-post_text">
+                                <h3 class="blog-post_title">
+                                    <a href="<?php the_permalink() ?>">
+                                        <?php the_title() ?>
+                                    </a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                <?php endwhile;
+            endif;
+            ?>
+        </div>
+        <div class="read-more">
+            <div class="container">
+                <div class="row">
+                    <div class="read-more-arrow">
+                        <div class="arrow icon">
+                        </div>
+                    </div>
+                    <div class="read-more-button">
+                        <a href="/blog/">
+                            <button type="button" class="btn btn-light">Xem thêm blog mới</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
 
 <!--Modal Waiting-->
 <div id="modal-waiting" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -271,123 +326,4 @@ if(!empty(get_option( 'sticky_posts' ))) {
         </div>
     </div>
 </div>
-<section class="blog-post">
-    <div class="container">
-        <h2>Bài viết mới</h2>
-        <div class="row">
-            <div class="col-lg-4 col-md-6 blog-post-box">
-                <div class="blog-post_card">
-                    <a href="">
-                        <div class="blog-post_thumnail">
-                            <img src="https://pengjoon.com/wp-content/uploads/13-1.jpg" class="" alt="">
-                        </div>
-                    </a>
-                    <div class="blog-post_text">
-                        <h3 class="blog-post_title">
-                            <a href="">
-                                What I Believe
-                            </a>
-                        </h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 blog-post-box">
-                <div class="blog-post_card">
-                    <a href="">
-                        <div class="blog-post_thumnail">
-                            <img src="https://pengjoon.com/wp-content/uploads/12-1.jpg" class="" alt="">
-                        </div>
-                    </a>
-                    <div class="blog-post_text">
-                        <h3 class="blog-post_title">
-                            <a href="">
-                                7 Figures and Still Poor
-                            </a>
-                        </h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 blog-post-box">
-                <div class="blog-post_card">
-                    <a href="">
-                        <div class="blog-post_thumnail">
-                            <img src="https://pengjoon.com/wp-content/uploads/2017/03/feat-post-thumb2.jpg" class="" alt="">
-                        </div>
-                    </a>
-                    <div class="blog-post_text">
-                        <h3 class="blog-post_title">
-                            <a href="">
-                                When Should I Quit My Job?
-                            </a>
-                        </h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 blog-post-box">
-                <div class="blog-post_card">
-                    <a href="">
-                        <div class="blog-post_thumnail">
-                            <img src="https://pengjoon.com/wp-content/uploads/2018/01/Peng-Joon-on-Fox-5-San-Diego.jpg" class="" alt="">
-                        </div>
-                    </a>
-                    <div class="blog-post_text">
-                        <h3 class="blog-post_title">
-                            <a href="">
-                                What Is Wrong With My Name?
-                            </a>
-                        </h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 blog-post-box">
-                <div class="blog-post_card">
-                    <a href="">
-                        <div class="blog-post_thumnail">
-                            <img src="https://pengjoon.com/wp-content/uploads/Thailand.jpg" class="" alt="">
-                        </div>
-                    </a>
-                    <div class="blog-post_text">
-                        <h3 class="blog-post_title">
-                            <a href="">
-                                What I Did That You Don’t Want To Do
-                            </a>
-                        </h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 blog-post-box">
-                <div class="blog-post_card">
-                    <a href="">
-                        <div class="blog-post_thumnail">
-                            <img src="https://pengjoon.com/wp-content/uploads/Tony-Robbins.jpg" class="" alt="">
-                        </div>
-                    </a>
-                    <div class="blog-post_text">
-                        <h3 class="blog-post_title">
-                            <a href="">
-                                Pay The Price or Be Average
-                            </a>
-                        </h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="read-more">
-        <div class="container">
-            <div class="row">
-                <div class="read-more-arrow">
-                    <div class="arrow icon">
-                    </div>
-                </div>
-                <div class="read-more-button">
-                    <a href="https://tranxuanvan.com/the-5-secrets-to-pulling-off-simple-minimal-design/">
-                        <button type="button" class="btn btn-light">Xem thêm bài viết mới</button>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>    
-    </div>
-
-</section>
 <?php get_footer() ?>

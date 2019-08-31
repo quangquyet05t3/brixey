@@ -1,4 +1,4 @@
-<div class="feature-content">
+<div class="feature-content home-desktop">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">

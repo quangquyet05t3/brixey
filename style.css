@@ -363,6 +363,12 @@ header .overlay {
 	.container {
 		width: 1200px !important;
 	}
+	.home-desktop {
+		display: block;
+	}
+	.home-mobile {
+		display: none;
+	}
 }
 @media screen and ( max-width : 991px ) {
 	#image {
@@ -393,6 +399,21 @@ header .overlay {
 	.blog-share {
 		margin-top: 10px;
 		margin-left: 0px;
+	}
+
+	.home-desktop {
+		display: none;
+	}
+	.home-mobile {
+		display: block;
+	}
+	.feature-content h4 {
+		margin: 0px 0px 0px !important;
+		line-height: 10px !important;
+	}
+
+	.feature-content h3 {
+		margin-top: 10px !important;
 	}
 
 }
