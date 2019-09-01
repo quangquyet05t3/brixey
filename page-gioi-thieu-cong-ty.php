@@ -17,47 +17,47 @@
         <div class="featured-box-image">
             <div class="featured-image">
                 <a href="">
-                    <img src="https://pengjoon.com/wp-content/uploads/2017/12/abc-icon.png" class="featured-abc size-full" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo1.jpg" class="featured-abc size-full" alt="">
                 </a>
             </div>
             <div class="featured-image">
                 <a href="">
-                    <img src="https://pengjoon.com/wp-content/uploads/2017/12/idk-icon.png" class="featured-idk size-full" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo2.jpg" class="featured-idk size-full" alt="">
                 </a>
             </div>
             <div class="featured-image">
                 <a href="">
-                    <img src="https://pengjoon.com/wp-content/uploads/2017/12/fox-news-icon.png" class="featured-fox size-full" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo3.png" class="featured-fox size-full" alt="">
                 </a>
             </div>
             <div class="featured-image">
                 <a href="">
-                    <img src="https://pengjoon.com/wp-content/uploads/2017/12/cbs-icon.png" class="featured-cbs size-full" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo4.png" class="featured-cbs size-full" alt="">
                 </a>
             </div>
             <div class="featured-image">
                 <a href="">
-                    <img src="https://pengjoon.com/wp-content/uploads/2017/12/good-day-icon.png" class="featured-goodday size-full" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo5.jpg" class="featured-goodday size-full" alt="">
                 </a>
             </div>
             <div class="featured-image">
                 <a href="">
-                    <img src="https://pengjoon.com/wp-content/uploads/2017/12/san-diego-living-icon.jpg" class="featured-sandiego size-full" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo6.png" class="featured-sandiego size-full" alt="">
                 </a>
             </div>
             <div class="featured-image">
                 <a href="">
-                    <img src="https://pengjoon.com/wp-content/uploads/2017/12/nbc-icon.jpg" class="featured-nbc size-full" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo7.jpg" class="featured-nbc size-full" alt="">
                 </a>
             </div>
             <div class="featured-image">
                 <a href="">
-                    <img src="https://pengjoon.com/wp-content/uploads/2017/12/the-morning-blend-icon.png" class="featured-blend size-full" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo8.jpg" class="featured-blend size-full" alt="">
                 </a>
             </div>
             <div class="featured-image">
                 <a href="">
-                    <img src="https://pengjoon.com/wp-content/uploads/2017/12/fox-news-sandiego-icon.png" class="featured-foxnews size-full" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo9.jpg" class="featured-foxnews size-full" alt="">
                 </a>
             </div>
         </div>
