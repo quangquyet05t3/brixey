@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
-                <h3>Featured in</h3>
+                <h3>Giới thiệu</h3>
             </div>
             <div class="col-lg-4">
 

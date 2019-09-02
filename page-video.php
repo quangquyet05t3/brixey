@@ -33,7 +33,7 @@ wp_reset_postdata();
 
 
 
-/*
+
 $list_video = array();
 $current_year = date('Y', time());
 
@@ -68,7 +68,7 @@ for($i=1;$i<=2;$i++) {
         'link_youtube' => 'https://www.youtube.com/embed/Gr1pREAm6Os',
         'embed_youtube' => '<iframe width="560" height="250" src="https://www.youtube.com/embed/Gr1pREAm6Os" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
     );
-}*/
+}
 
 
 
@@ -89,6 +89,26 @@ krsort($list_video);
 		</div>
 	</div>
 </section>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <ul>
+                    <?php foreach ($list_video as $year=>$item): ?>
+                        <?php $li_id = sprintf('li-%s', $year); ?>
+                        <li class="li-year" id="<?php echo $li_id; ?>" year="<?php echo $year; ?>">
+                            <a>
+                                <?php echo $year; ?>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="testimonials-video_all">
 	<div class="container">
 		<div class="row">
@@ -111,7 +131,8 @@ krsort($list_video);
 	<div class="container">
 		<div class="row">
             <?php if(isset($list_video[$previous_year])) : ?>
-                <div class="media-press_img">
+                <?php $year_id = sprintf('year-%s', $previous_year); ?>
+                <div class="media-press_img" id="<?php echo $year_id; ?>">
                     <h2>
                         <b></b>
                         <span><?php echo $previous_year; ?></span>
@@ -161,7 +182,8 @@ krsort($list_video);
         <section id="testimonials-video-<?php echo $i; ?>">
             <div class="container">
                 <div class="row">
-                    <div class="media-press_img">
+                    <?php $year_id = sprintf('year-%s', $year); ?>
+                    <div class="media-press_img" id="<?php echo $year_id; ?>">
                         <h2>
                             <b></b>
                             <span><?php echo $year; ?></span>

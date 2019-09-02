@@ -11,6 +11,13 @@ jQuery('#form-info3').submit(function (event ) {
     event.preventDefault();
     submitFormInfo('#form-info3', 1);
 });
+jQuery(".li-year").click(function (){
+    var year = jQuery(this).attr('year');
+    var idYear = '#year-'+year;
+    jQuery('html, body').animate({
+        scrollTop: jQuery(idYear).offset().top
+    }, 2000);
+});
 
 function submitFormInfo(selector, attempts) {
     var url = jQuery(selector).attr('data-url');
