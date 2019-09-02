@@ -94,7 +94,7 @@
                                         </div>
                                     </div>
                                     <div class="read-more-button">
-                                        <a href="<?php the_permalink() ?>">
+                                        <a href="/">
                                             <button type="button" class="btn btn-light">Đọc thêm</button>
                                         </a>
                                     </div>
@@ -128,7 +128,7 @@
                     </div>
                 </div>
                 <div class="read-more-button">
-                    <a href="<?php the_permalink() ?>">
+                    <a href="/">
                         <button type="button" class="btn btn-light">Tải xuống</button>
                     </a>
                 </div>
@@ -149,17 +149,26 @@
     </div>
     <div class="row" style="margin-top: 50px;">
         <div class="col-lg-4 media-logo">
-            <a href="/"><img src="https://tranxuanvan.com/wp-content/uploads/2019/05/peng-joon-logo-copy-copy-e1559135091999.png"  alt=""></a>
+            <a href="/"><img src="/wp-content/uploads/2019/05/peng-joon-logo-copy-copy-e1559135091999.png"  alt=""></a>
         </div>
         <div class="col-lg-4 media-logo">
-            <a href="/"><img src="https://tranxuanvan.com/wp-content/uploads/2019/05/peng-joon-logo-copy-copy-e1559135091999.png"  alt=""></a>
+            <a href="/"><img src="/wp-content/uploads/2019/05/peng-joon-logo-copy-copy-e1559135091999.png"  alt=""></a>
         </div>
         <div class="col-lg-4 media-logo">
-            <a href="/"><img src="https://tranxuanvan.com/wp-content/uploads/2019/05/peng-joon-logo-copy-copy-e1559135091999.png"  alt=""></a>
+            <a href="/"><img src="/wp-content/uploads/2019/05/peng-joon-logo-copy-copy-e1559135091999.png"  alt=""></a>
         </div>
     </div>
     </div>
 </section>
+
+<?php
+/*    if( have_posts() ):
+        while( have_posts() ): the_post(); */?><!--
+            <?php /*the_content(); */?>
+        --><?php /*endwhile;
+    endif;
+    wp_reset_postdata();
+*/?>
 
 <?php
 $category_name = 'video';
