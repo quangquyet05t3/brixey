@@ -160,6 +160,40 @@
     </div>
     </div>
 </section>
+
+<?php
+$category_name = 'video';
+$paged = ( get_query_var('paged') == 0 ) ? 1 : get_query_var('paged');
+$post_per_page = 10;
+
+$list_video = array();
+
+$args = array(
+    'post_type' => 'post',
+    'category_name' => $category_name,
+    'posts_per_page' => $post_per_page
+);
+$lastBlog = new WP_Query($args);
+$current_year = date('Y', time());
+$previous_year = (string) (((int)$current_year)-1);
+if( $lastBlog->have_posts() ):
+    while( $lastBlog->have_posts() ): $lastBlog->the_post(); ?>
+        <?php
+
+        list(, , $year) = explode('/', get_the_date());
+        $list_video[$year][] = array(
+            'year' => $year,
+            'title' => get_the_title(),
+            'embed_youtube' => get_field('embed_youtube')
+        );
+        ?>
+    <?php endwhile;
+endif;
+wp_reset_postdata();
+krsort($list_video);
+
+
+?>
 <section id="media-photo">
     <div class="container media-video">
         <div class="row" ">
@@ -172,23 +206,18 @@
         </div>
     </div>
     <div class="row" style="margin-top:50px;">
-        <div class="col-lg-6">
-            <div class="media-video-box">
-                <iframe height="315" src="https://www.youtube.com/embed/oMcIcEiOtmc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <div class="media-video-text">
-                    <h2>ABC4 Utah</h2>
+        <?php foreach ($list_video as $year=>$items): ?>
+            <?php foreach ($items as $item): ?>
+                <div class="col-lg-6">
+                    <div class="media-video-box">
+                        <?php echo $item['embed_youtube']; ?>
+                        <div class="media-video-text">
+                            <h2><?php echo $item['title']; ?></h2>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-lg-6">
-            <div class="media-video-box">
-                <iframe height="315" src="https://www.youtube.com/embed/oMcIcEiOtmc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <div class="media-video-text">
-                    <h2>ABC4 Utah</h2>
-                </div>
-            </div>
-        </div>
-    </div>
+            <?php endforeach; ?>
+        <?php endforeach; ?>
     </div>
 </section>
 <?php brixey_pagination($lastBlog) ?>
