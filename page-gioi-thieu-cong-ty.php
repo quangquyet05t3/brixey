@@ -57,118 +57,22 @@
             </div>
             <div class="featured-image">
                 <a href="">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo9.jpg" class="featured-foxnews size-full" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo9.png" class="featured-foxnews size-full" alt="">
                 </a>
             </div>
         </div>
     </div>
 </section>
-<section id="media-press">
-    <div class="container">
-        <div class="row">
-            <div class="media-press_title">
-                <h2>MEDIA BIO &amp; PRESS KIT</h2>
-                <h3>Peng Joon is available for speaking, interviews, podcasts. Download the media bio and press kit here:</h3>
-            </div>
-            <div class="media-press_img">
-                <h2>
-                    <b></b>
-                    <span>MEDIA BIO</span>
-                    <b></b>
-                </h2>
-            </div>
-            <div class="media-press-avatar">
-                <div class="row">
-                    <div class="col-lg-4 avatar-bg">
-                        <div class="avatar">
-                            <img width="348" height="447" src="/wp-content/themes/brixey/img/peng-media-img.png">
-                        </div>
-                    </div>
-                    <div class="col-lg-8 text">
-                        <p class="visible-copy">After Peng Joon made his first million online through selling products in the computer game niche, he decided to teach others how to monetize their knowledge, passion and life experience, both online and offline. Over the past few years, he has built a following of over a million entrepreneurs, spoke in over 20+ countries around the world and has shared the stage with leaders like Richard Branson, Tony Robbins, and Robert Kiyosaki.</p>
-                        <div class="read-more">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="read-more-arrow">
-                                        <div class="arrow icon">
-                                        </div>
-                                    </div>
-                                    <div class="read-more-button">
-                                        <a href="/">
-                                            <button type="button" class="btn btn-light">Đọc thêm</button>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="media-photo">
-    <div class="container">
-        <div class="row">
-            <div class="media-press_img">
-                <h2>
-                    <b></b>
-                    <span>APPROVED PHOTOS</span>
-                    <b></b>
-                </h2>
-            </div>
-        </div>
-    </div>
-    <div class="media-poto_banner"></div>
-    <div class="read-more">
-        <div class="container">
-            <div class="row">
-                <div class="read-more-arrow">
-                    <div class="arrow icon">
-                    </div>
-                </div>
-                <div class="read-more-button">
-                    <a href="/">
-                        <button type="button" class="btn btn-light">Tải xuống</button>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="media-press">
-    <div class="container media-logo-box">
-        <div class="row" ">
-        <div class="media-press_img">
-            <h2>
-                <b></b>
-                <span>BRAND LOGOS</span>
-                <b></b>
-            </h2>
-        </div>
-    </div>
-    <div class="row" style="margin-top: 50px;">
-        <div class="col-lg-4 media-logo">
-            <a href="/"><img src="/wp-content/uploads/2019/05/peng-joon-logo-copy-copy-e1559135091999.png"  alt=""></a>
-        </div>
-        <div class="col-lg-4 media-logo">
-            <a href="/"><img src="/wp-content/uploads/2019/05/peng-joon-logo-copy-copy-e1559135091999.png"  alt=""></a>
-        </div>
-        <div class="col-lg-4 media-logo">
-            <a href="/"><img src="/wp-content/uploads/2019/05/peng-joon-logo-copy-copy-e1559135091999.png"  alt=""></a>
-        </div>
-    </div>
-    </div>
-</section>
+
 
 <?php
-/*    if( have_posts() ):
-        while( have_posts() ): the_post(); */?><!--
-            <?php /*the_content(); */?>
-        --><?php /*endwhile;
+    if( have_posts() ):
+        while( have_posts() ): the_post(); ?>
+            <?php the_content(); ?>
+        <?php endwhile;
     endif;
     wp_reset_postdata();
-*/?>
+?>
 
 <?php
 $category_name = 'video';
