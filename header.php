@@ -13,10 +13,8 @@
     <link href="<?php echo get_template_directory_uri() ?>/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" >
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/quyet.css" >
 
     <!--<script src="<?php /*echo get_template_directory_uri() */?>/vendor/jquery/dist/jquery.min.js"></script>-->
-
 
     <style type="text/css">
 

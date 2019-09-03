@@ -19,6 +19,9 @@ jQuery(".li-year").click(function (){
     }, 2000);
 });
 
+
+
+
 function submitFormInfo(selector, attempts) {
     var url = jQuery(selector).attr('data-url');
     jQuery('#modal-waiting').modal('show');
