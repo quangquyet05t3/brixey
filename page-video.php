@@ -88,25 +88,18 @@ krsort($list_video);
             </div>
 		</div>
 	</div>
-</section>
-
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <ul>
-                    <?php foreach ($list_video as $year=>$item): ?>
-                        <?php $li_id = sprintf('li-%s', $year); ?>
-                        <li class="li-year" id="<?php echo $li_id; ?>" year="<?php echo $year; ?>">
-                            <a>
-                                <?php echo $year; ?>
-                            </a>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
-            </div>
-        </div>
-    </div>
+	<div class="button-year">
+	    <ul>
+	        <?php foreach ($list_video as $year=>$item): ?>
+	            <?php $li_id = sprintf('li-%s', $year); ?>
+	            <li class="li-year" id="<?php echo $li_id; ?>" year="<?php echo $year; ?>">
+	                <a>
+	                    <?php echo $year; ?>
+	                </a>
+	            </li>
+	        <?php endforeach; ?>
+	    </ul>
+	</div>
 </section>
 
 <section id="testimonials-video_all">

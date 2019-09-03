@@ -890,6 +890,9 @@ header .overlay {
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     padding: 250px 0px 250px 0px;
 }
+#testimonials-banner{
+	position: relative;
+}
 #media-banner h3, #testimonials-banner h3{
     color: #ffffff;
     font-family: "Playfair Display", Sans-serif;
@@ -1177,6 +1180,78 @@ td strong{
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     height: auto;
     min-height: 371px;
+}
+.button-year{
+    position: absolute;
+    bottom: 40px;
+    margin: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+}
+.button-year ul {
+    list-style-type: none;
+    padding: 0;
+    display: inline-block;
+    margin: 0;
+}
+.button-year li {
+    display: inline-block;
+    color: #fff;
+    margin: 0 5px 15px;
+}
+.button-year a {
+    padding: 6px 25px;
+    background-color: rgba(149,106,14,0.35);
+    font-size: 22px;
+    border: 2px solid #fff;
+    font-weight: bold;
+    display: inline-block;
+}
+.button-year a:hover {
+    cursor: pointer;
+    background-color: #f8d777;
+    border-color: #f8d777;
+    color: #000 !important;
+}
+#blog-right .row-right h6 a{
+    word-break: break-all;
+}
+#single-post-banner-wrapper{
+	background-image: url(../brixey/img/WhatsApp_Image_2019-07-08_at_6.17.56_PM.jpeg-810x620.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding: 280px 18px 45px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+#single-post-banner-wrapper:before{
+    content: "";
+    background-color: rgba(0,0,0,0.2);
+    background-size: auto;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+.row-title {
+    position: absolute;
+    display: inline-block;
+    z-index: 10;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#single-post-content{
+	padding: 60px 0;
+}
+#single-post-content .content-block p{
+	padding-bottom: 0;
+	margin-bottom: 15px;
 }
 @media (max-width: 767px){
 	#social .col-lg-2{
