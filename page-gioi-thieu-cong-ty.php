@@ -63,16 +63,121 @@
         </div>
     </div>
 </section>
-
+<section id="media-press">
+    <div class="container">
+        <div class="row">
+            <div class="media-press_title">
+                <h2>MEDIA BIO &amp; PRESS KIT</h2>
+                <h3>Peng Joon is available for speaking, interviews, podcasts. Download the media bio and press kit here:</h3>
+            </div>
+            <div class="media-press_img">
+                <h2>
+                    <b></b>
+                    <span>MEDIA BIO</span>
+                    <b></b>
+                </h2>
+            </div>
+            <div class="media-press-avatar">
+                <div class="row">
+                    <div class="col-lg-4 avatar-bg">
+                        <div class="avatar">
+                            <img width="348" height="447" src="/wp-content/themes/brixey/img/peng-media-img.png">
+                        </div>
+                    </div>
+                    <div class="col-lg-8 text">
+                        <p class="visible-copy">After Peng Joon made his first million online through selling products in the computer game niche, he decided to teach others how to monetize their knowledge, passion and life experience, both online and offline. Over the past few years, he has built a following of over a million entrepreneurs, spoke in over 20+ countries around the world and has shared the stage with leaders like Richard Branson, Tony Robbins, and Robert Kiyosaki.</p>
+                        <div class="read-more">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="read-more-arrow">
+                                        <div class="arrow icon">
+                                        </div>
+                                    </div>
+                                    <div class="read-more-button">
+                                        <a href="/">
+                                            <button type="button" class="btn btn-light">Đọc thêm</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="media-photo">
+    <div class="container">
+        <div class="row">
+            <div class="media-press_img">
+                <h2>
+                    <b></b>
+                    <span>APPROVED PHOTOS</span>
+                    <b></b>
+                </h2>
+            </div>
+        </div>
+    </div>
+    <div class="media-poto_banner"></div>
+    <div class="read-more">
+        <div class="container">
+            <div class="row">
+                <div class="read-more-arrow">
+                    <div class="arrow icon">
+                    </div>
+                </div>
+                <div class="read-more-button">
+                    <a href="/">
+                        <button type="button" class="btn btn-light">Tải xuống</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="media-press">
+    <div class="container media-logo-box">
+        <div class="row" ">
+        <div class="media-press_img">
+            <h2>
+                <b></b>
+                <span>BRAND LOGOS</span>
+                <b></b>
+            </h2>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 50px;">
+        <div class="col-lg-4 media-logo">
+            <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/img/v1.jpg"  alt=""></a>
+        </div>
+        <div class="col-lg-4 media-logo">
+            <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/img/v2.jpg"  alt=""></a>
+        </div>
+        <div class="col-lg-4 media-logo">
+            <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/img/v3.jpg"  alt=""></a>
+        </div>
+        <div class="col-lg-4 media-logo">
+            <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/img/v4.png"  alt=""></a>
+        </div>
+        <div class="col-lg-4 media-logo">
+            <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/img/v5.png"  alt=""></a>
+        </div>
+        <div class="col-lg-4 media-logo">
+            <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/img/v6.png"  alt=""></a>
+        </div>
+    </div>
+    </div>
+</section>
 
 <?php
-    if( have_posts() ):
-        while( have_posts() ): the_post(); ?>
-            <?php the_content(); ?>
-        <?php endwhile;
+/*    if( have_posts() ):
+        while( have_posts() ): the_post(); */?><!--
+            <?php /*the_content(); */?>
+        --><?php /*endwhile;
     endif;
     wp_reset_postdata();
-?>
+*/?>
 
 <?php
 $category_name = 'video';
@@ -92,12 +197,15 @@ $previous_year = (string) (((int)$current_year)-1);
 if( $lastBlog->have_posts() ):
     while( $lastBlog->have_posts() ): $lastBlog->the_post(); ?>
         <?php
-
+        //$youtube_id = get_field('youtube_id');
+        $youtube_id = 'SNBRWF4NQ20';
+        $youtube_img = sprintf('https://img.youtube.com/vi/%s/0.jpg', $youtube_id);
         list(, , $year) = explode('/', get_the_date());
         $list_video[$year][] = array(
             'year' => $year,
             'title' => get_the_title(),
-            'embed_youtube' => get_field('embed_youtube')
+            'youtube_id' => $youtube_id,
+            'youtube_img' => $youtube_img
         );
         ?>
     <?php endwhile;
@@ -122,8 +230,8 @@ krsort($list_video);
         <?php foreach ($list_video as $year=>$items): ?>
             <?php foreach ($items as $item): ?>
                 <div class="col-lg-6">
-                    <div class="media-video-box">
-                        <?php echo $item['embed_youtube']; ?>
+                    <div class="media-video-box" youtubeid="<?php echo $item['youtube_id']; ?>">
+                        <img src="<?php echo $item['youtube_img']; ?>" alt="">
                         <div class="media-video-text">
                             <h2><?php echo $item['title']; ?></h2>
                         </div>
@@ -136,3 +244,9 @@ krsort($list_video);
 <?php brixey_pagination($lastBlog) ?>
 
 <?php get_footer() ?>
+
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/grt-youtube-popup.css">
+<script src="<?php echo get_template_directory_uri(); ?>/js/grt-youtube-popup.js"></script>
+<script>
+    jQuery(".media-video-box").grtyoutube({ autoPlay:false });
+</script>
