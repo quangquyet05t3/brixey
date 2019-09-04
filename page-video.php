@@ -109,7 +109,8 @@ krsort($list_video);
                 <?php foreach ($list_video[$current_year] as $item) : ?>
                     <div class="col-lg-6">
                         <div class="media-video-box">
-                            <?php echo $item['embed_youtube']; ?>
+                            <?php //echo $item['embed_youtube']; ?>
+                            <img src="https://tranxuanvan.com/wp-content/uploads/2019/05/TANG-3C-570x400.jpeg"alt="">
                             <div class="media-video-text">
                                 <h2> <?php echo $item['title']; ?></h2>
                             </div>
@@ -125,6 +126,18 @@ krsort($list_video);
 		<div class="row">
             <?php if(isset($list_video[$previous_year])) : ?>
                 <?php $year_id = sprintf('year-%s', $previous_year); ?>
+                <div class="button-year">
+                    <ul>
+                        <?php foreach ($list_video as $year=>$item): ?>
+                            <?php $li_id = sprintf('li-%s', $year); ?>
+                            <li class="li-year" id="<?php echo $li_id; ?>" year="<?php echo $year; ?>">
+                                <a>
+                                    <?php echo $year; ?>
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
                 <div class="media-press_img" id="<?php echo $year_id; ?>">
                     <h2>
                         <b></b>
@@ -137,7 +150,8 @@ krsort($list_video);
                     <?php if($i<=2): ?>
                         <div class="col-lg-6">
                             <div class="media-video-box">
-                                <?php echo $item['embed_youtube']; ?>
+                                <?php //echo $item['embed_youtube']; ?>
+                                <img src="https://tranxuanvan.com/wp-content/uploads/2019/05/TANG-3C-570x400.jpeg"alt="">
                                 <div class="media-video-text">
                                     <h2><?php echo $item['title']; ?></h2>
                                 </div>
@@ -155,7 +169,8 @@ krsort($list_video);
                     <?php if($i>2): ?>
                         <div class="col-lg-4">
                             <div class="media-video-box">
-                                <?php echo $item['embed_youtube']; ?>
+                                <?php //echo $item['embed_youtube']; ?>
+                                <img src="https://tranxuanvan.com/wp-content/uploads/2019/05/TANG-3C-570x400.jpeg"alt="">
                                 <div class="media-video-text">
                                     <h2><?php echo $item['title']; ?></h2>
                                 </div>
@@ -176,6 +191,18 @@ krsort($list_video);
             <div class="container">
                 <div class="row">
                     <?php $year_id = sprintf('year-%s', $year); ?>
+                    <div class="button-year">
+                        <ul>
+                            <?php foreach ($list_video as $year=>$item): ?>
+                                <?php $li_id = sprintf('li-%s', $year); ?>
+                                <li class="li-year" id="<?php echo $li_id; ?>" year="<?php echo $year; ?>">
+                                    <a>
+                                        <?php echo $year; ?>
+                                    </a>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
                     <div class="media-press_img" id="<?php echo $year_id; ?>">
                         <h2>
                             <b></b>
@@ -186,7 +213,8 @@ krsort($list_video);
                     <?php foreach ($items as $item): ?>
                         <div class="col-lg-4">
                             <div class="media-video-box">
-                                <?php echo $item['embed_youtube']; ?>
+                                <?php //echo $item['embed_youtube']; ?>
+                                <img src="https://tranxuanvan.com/wp-content/uploads/2019/05/TANG-3C-570x400.jpeg"alt="">
                                 <div class="media-video-text">
                                     <h2><?php echo $item['title']; ?></h2>
                                 </div>
