@@ -5,9 +5,7 @@
 $category_name = 'video';
 $paged = ( get_query_var('paged') == 0 ) ? 1 : get_query_var('paged');
 $post_per_page = 10;
-
 $list_video = array();
-
 $args = array(
     'post_type' => 'post',
     'category_name' => $category_name,
@@ -19,58 +17,66 @@ $previous_year = (string) (((int)$current_year)-1);
 if( $lastBlog->have_posts() ):
     while( $lastBlog->have_posts() ): $lastBlog->the_post(); ?>
         <?php
-
+            $youtube_id = get_field('youtube_id');
+            $youtube_img = sprintf('https://img.youtube.com/vi/%s/0.jpg', $youtube_id);
             list(, , $year) = explode('/', get_the_date());
             $list_video[$year][] = array(
                 'year' => $year,
                 'title' => get_the_title(),
-                'embed_youtube' => get_field('embed_youtube')
+                'youtube_id' => $youtube_id,
+                'youtube_img' => $youtube_img
             );
         ?>
     <?php endwhile;
 endif;
 wp_reset_postdata();
 
-
-
-
 $list_video = array();
 $current_year = date('Y', time());
 
 for($i=1;$i<=3;$i++) {
+    $youtube_id = '7P3k81CaKqU';
+    $youtube_img = sprintf('https://img.youtube.com/vi/%s/0.jpg', $youtube_id);
     $list_video['2016'][] = array(
         'year' => '2016',
         'title' => 'Video 2016 '.$i,
-        'embed_youtube' => '<iframe width="560" height="250" src="https://www.youtube.com/embed/Gr1pREAm6Os" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+        'youtube_id' => $youtube_id,
+        'youtube_img' => $youtube_img
     );
 }
 
 for($i=1;$i<=3;$i++) {
+    $youtube_id = 'SvWSW2Wj08I';
+    $youtube_img = sprintf('https://img.youtube.com/vi/%s/0.jpg', $youtube_id);
     $list_video['2017'][] = array(
         'year' => '2017',
         'title' => 'Video 2017 '.$i,
-        'embed_youtube' => '<iframe width="560" height="250" src="https://www.youtube.com/embed/Gr1pREAm6Os" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+        'youtube_id' => $youtube_id,
+        'youtube_img' => $youtube_img
     );
 }
 
 for($i=1;$i<=5;$i++) {
+    $youtube_id = 'SNBRWF4NQ20';
+    $youtube_img = sprintf('https://img.youtube.com/vi/%s/0.jpg', $youtube_id);
     $list_video['2018'][] = array(
         'year' => '2018',
         'title' => 'Video 2018 '.$i,
-        'embed_youtube' => '<iframe width="560" height="250" src="https://www.youtube.com/embed/Gr1pREAm6Os" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+        'youtube_id' => $youtube_id,
+        'youtube_img' => $youtube_img
     );
 }
 
 for($i=1;$i<=2;$i++) {
+    $youtube_id = 'FFlNhM4iPv8';
+    $youtube_img = sprintf('https://img.youtube.com/vi/%s/0.jpg', $youtube_id);
     $list_video['2019'][] = array(
         'year' => '2019',
         'title' => 'Video 2019 '.$i,
-        'link_youtube' => 'https://www.youtube.com/embed/Gr1pREAm6Os',
-        'embed_youtube' => '<iframe width="560" height="250" src="https://www.youtube.com/embed/Gr1pREAm6Os" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+        'youtube_id' => $youtube_id,
+        'youtube_img' => $youtube_img
     );
 }
-
-
 
 krsort($list_video);
 
@@ -108,9 +114,9 @@ krsort($list_video);
             <?php if(isset($list_video[$current_year])) : ?>
                 <?php foreach ($list_video[$current_year] as $item) : ?>
                     <div class="col-lg-6">
-                        <div class="media-video-box">
+                        <div class="media-video-box" youtubeid="<?php echo $item['youtube_id']; ?>">
                             <?php //echo $item['embed_youtube']; ?>
-                            <img src="https://tranxuanvan.com/wp-content/uploads/2019/05/TANG-3C-570x400.jpeg"alt="">
+                            <img src="<?php echo $item['youtube_img']; ?>" alt="">
                             <div class="media-video-text">
                                 <h2> <?php echo $item['title']; ?></h2>
                             </div>
@@ -149,9 +155,9 @@ krsort($list_video);
                 <?php foreach ($list_video[$previous_year] as $item) : ?>
                     <?php if($i<=2): ?>
                         <div class="col-lg-6">
-                            <div class="media-video-box">
+                            <div class="media-video-box" youtubeid="<?php echo $item['youtube_id']; ?>">
                                 <?php //echo $item['embed_youtube']; ?>
-                                <img src="https://tranxuanvan.com/wp-content/uploads/2019/05/TANG-3C-570x400.jpeg"alt="">
+                                <img src="<?php echo $item['youtube_img']; ?>" alt="">
                                 <div class="media-video-text">
                                     <h2><?php echo $item['title']; ?></h2>
                                 </div>
@@ -168,9 +174,9 @@ krsort($list_video);
                 <?php foreach ($list_video[$previous_year] as $item) : ?>
                     <?php if($i>2): ?>
                         <div class="col-lg-4">
-                            <div class="media-video-box">
+                            <div class="media-video-box" youtubeid="<?php echo $item['youtube_id']; ?>">
                                 <?php //echo $item['embed_youtube']; ?>
-                                <img src="https://tranxuanvan.com/wp-content/uploads/2019/05/TANG-3C-570x400.jpeg"alt="">
+                                <img src="<?php echo $item['youtube_img']; ?>" alt="">
                                 <div class="media-video-text">
                                     <h2><?php echo $item['title']; ?></h2>
                                 </div>
@@ -193,11 +199,11 @@ krsort($list_video);
                     <?php $year_id = sprintf('year-%s', $year); ?>
                     <div class="button-year">
                         <ul>
-                            <?php foreach ($list_video as $year=>$item): ?>
-                                <?php $li_id = sprintf('li-%s', $year); ?>
-                                <li class="li-year" id="<?php echo $li_id; ?>" year="<?php echo $year; ?>">
+                            <?php foreach ($list_video as $li_year=>$item): ?>
+                                <?php $li_id = sprintf('li-%s', $li_year); ?>
+                                <li class="li-year" id="<?php echo $li_id; ?>" year="<?php echo $li_year; ?>">
                                     <a>
-                                        <?php echo $year; ?>
+                                        <?php echo $li_year; ?>
                                     </a>
                                 </li>
                             <?php endforeach; ?>
@@ -212,9 +218,9 @@ krsort($list_video);
                     </div>
                     <?php foreach ($items as $item): ?>
                         <div class="col-lg-4">
-                            <div class="media-video-box">
+                            <div class="media-video-box" youtubeid="<?php echo $item['youtube_id']; ?>">
                                 <?php //echo $item['embed_youtube']; ?>
-                                <img src="https://tranxuanvan.com/wp-content/uploads/2019/05/TANG-3C-570x400.jpeg"alt="">
+                                <img src="<?php echo $item['youtube_img']; ?>" alt="">
                                 <div class="media-video-text">
                                     <h2><?php echo $item['title']; ?></h2>
                                 </div>
@@ -229,3 +235,8 @@ krsort($list_video);
 <?php endforeach; ?>
 
 <?php get_footer() ?>
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/grt-youtube-popup.css">
+<script src="<?php echo get_template_directory_uri(); ?>/js/grt-youtube-popup.js"></script>
+<script>
+    jQuery(".media-video-box").grtyoutube({ autoPlay:false });
+</script>
