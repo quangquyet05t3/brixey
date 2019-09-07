@@ -20,15 +20,17 @@
 
         /* ---------------------Home one-------------------- */
         #home-one {
-            background: url('<?php echo get_template_directory_uri(); ?>/img/feature-one-bg.jpg') center center no-repeat;
+            background: url('<?php echo get_template_directory_uri(); ?>/img/feature-one-bg.jpg') top center no-repeat;
             background-size: cover;
             color: white;
+            padding: 100px 0px 90px 0px;
         }
 
         #about {
-            background: url('<?php echo get_template_directory_uri(); ?>/img/bg-about.jpg') center center no-repeat;
+            background: url('<?php echo get_template_directory_uri(); ?>/img/bg-about.jpg') top center no-repeat;
             background-size: cover;
             color: white;
+            padding: 30px 0px 30px 0px;
         }
 
         #contact {
@@ -69,38 +71,40 @@
 
 
         #blog {
-            background: url('<?php echo get_template_directory_uri(); ?>/img/bg-blog.jpg') center center no-repeat;
+            background: url('<?php echo get_template_directory_uri(); ?>/img/bg-blog.jpg') center top no-repeat;
             background-size: cover;
             color: white;
-            height: 100%;
+            padding: 30px 0px 30px 0px;
             width: 100%;
         }
 
         #project {
-            background: url('<?php echo get_template_directory_uri(); ?>/img/bg-du-an.jpg') center center no-repeat;
+            background: url('<?php echo get_template_directory_uri(); ?>/img/bg-du-an.jpg') top center no-repeat;
             background-size: cover;
             color: white;
-            height: 100%;
+            padding: 30px 0px 30px 0px;
             width: 100%;
         }
 
         #news {
-            background: url('<?php echo get_template_directory_uri(); ?>/img/bg-tin-tuc.jpg') center center no-repeat;
+            background: url('<?php echo get_template_directory_uri(); ?>/img/bg-tin-tuc.jpg') top center no-repeat;
             background-size: cover;
             color: white;
-            height: 100%;
+            /*height: 100%;*/
             width: 100%;
+            padding: 30px 0px 30px 0px;
         }
 
 
         .blog-article {
             height: 310px;
             border: #d49d48 solid 2px;
-            opacity: 0.7;
+            /*opacity: 0.7;*/
             margin-bottom: 27px;
             color: white;
             padding: 50px 45px 45px 50px;
-            content
+            /*content*/
+            position: relative;
         }
 
         /*-----------------Arrow button----------------*/

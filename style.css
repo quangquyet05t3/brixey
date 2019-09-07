@@ -293,7 +293,7 @@ header .overlay {
 /* --------------------Read more-------------------- */
 .read-more {
 	height: 46px;
-	max-width: 200px;
+	max-width: 230px;
 }
 .read-more-button {
 	border: #aa2b2b solid 2px;
@@ -309,6 +309,7 @@ header .overlay {
 	text-transform: uppercase;
 	height: 42px;
 	border-radius: 0;
+	background: transparent;
 }
 .read-more-button button.btn:focus {
 	outline: none;
@@ -331,7 +332,7 @@ header .overlay {
 }
 
 .read-more-services {
-	max-width: 245px;
+	max-width: 335px;
 }
 	/* ----------------------Section Home One------------------------ */
 #home-one .home-content {
@@ -375,6 +376,13 @@ header .overlay {
 	}
 }
 @media screen and ( max-width : 991px ) {
+	#form-footer .form-group .col-12{
+		padding: 0 15px !important;
+	}
+	.video-content-image{
+		margin: auto;
+    	padding-bottom: 20px;
+	}
 	#image {
 		display: block;
 		height: 50%;
@@ -387,20 +395,17 @@ header .overlay {
 		align-items: center;
 		text-align: center;
 	}
-	#form-footer {
-		display: none;
-	}
 
 	#form-header {
 		display: block;
-		background: #e0e0e0;
+		background-color: rgba(0,0,0,0.9);
 	}
 	#navbar-social {
 		display: none;
 	}
-	.blog-article {
+	/*.blog-article {
 		height: 500px !important;
-	}
+	}*/
 	.blog-share {
 		margin-top: 10px;
 		margin-left: 0px;
@@ -721,7 +726,7 @@ header .overlay {
 }
 .blog-post .read-more{
 	margin: 40px auto 10px;
-    max-width: 275px;
+    max-width: 355px;
 }
 .blog-post .read-more .btn-light{
 	background: transparent;
@@ -766,7 +771,7 @@ header .overlay {
 	display: none;
 }
 #about-event{
-    background-image: url(../brixey/img/peng-joon-img.jpg);
+    /*background-image: url(../brixey/img/peng-joon-img.jpg);*/
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -775,7 +780,7 @@ header .overlay {
     border-color: #ffffff;
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     padding: 0px 0px 0px 0px;
-    min-height: 727px;
+    /*min-height: 727px;*/
 }
 #about-successfully{
     background-image: url(../brixey/img/successful-section-bg.jpg);
@@ -805,7 +810,7 @@ header .overlay {
     font-weight: 300;
 }
 #about-event_time{
-    background-image: url(../brixey/img/peng-joon-img2.jpg);
+    /*background-image: url(../brixey/img/peng-joon-img2.jpg);*/
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -814,7 +819,7 @@ header .overlay {
     border-color: #ffffff;
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     padding: 0px 0px 0px 0px;
-    min-height: 216px;
+    /*min-height: 216px;*/
 }
 #about-programs{
     background-image: url(../brixey/img/program-section-bg.jpg);
@@ -860,7 +865,7 @@ header .overlay {
 }
 
 #about-famous{
-    background-image: url(../brixey/img/famous-pic-collage.jpg);
+    /*background-image: url(../brixey/img/famous-pic-collage.jpg);*/
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -871,7 +876,13 @@ header .overlay {
     margin-top: 0px;
     margin-bottom: 30px;
     padding: 0px 0px 0px 0px;
-    min-height: 200px;
+    /*min-height: 200px;*/
+}
+#media-photo .read-more{
+	max-width: 240px;
+}
+#about-famous img, #about-event_time img, #about-event img, .news-img img, #media-photo img, #contact-img img{
+	width: 100%;
 }
 #about-seemore{
 	margin-bottom: 60px;
@@ -991,12 +1002,14 @@ header .overlay {
     background-image: url(../brixey/img/make-product-bg.jpg);
     background-position: top center;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
+    /*background-size: auto;*/
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     padding: 80px 0px 80px 0px;
+
 }
 .media-poto_banner{
-    background-image: url(../brixey/img/famous-pic-collage.jpg);
+    /*background-image: url(../brixey/img/famous-pic-collage.jpg);*/
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1006,7 +1019,7 @@ header .overlay {
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     margin-top: 30px;
     margin-bottom: 30px;
-    min-height: 200px;
+    /*min-height: 200px;*/
 }
 #media-photo .read-more{
 	margin: auto;
@@ -1177,7 +1190,7 @@ td strong{
 	color: #dca24b;
 }
 #contact-img{
-	background-image: url(../brixey/img/contact-images.jpg);
+	/*background-image: url(../brixey/img/contact-images.jpg);*/
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1186,7 +1199,7 @@ td strong{
     border-color: #ffffff;
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     height: auto;
-    min-height: 371px;
+    /*min-height: 371px;*/
 }
 .button-year{
     position: absolute;
@@ -1269,6 +1282,31 @@ td strong{
     width: 100%;
     border: 5px solid #000;
 }
+.blog-article .row{
+	z-index: 9999;
+	position: relative;
+}
+.blog-article:before{
+    width: 100%;
+    height: 100%;
+    content: '';
+    z-index: 1;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0, rgba(0, 0, 0, 1)), color-stop(1, rgba(255, 255, 255, 0)) );
+    background-image: -o-linear-gradient(right, rgb(0, 0, 0) 0%, rgb(255, 255, 255, 0) 100%);
+    background-image: -moz-linear-gradient(right, rgb(0, 0, 0) 0%, rgb(255, 255, 255, 0) 100%);
+    background-image: -webkit-linear-gradient(right, rgb(0, 0, 0) 0%, rgb(255, 255, 255, 0) 100%);
+    background-image: -ms-linear-gradient(right, rgb(0, 0, 0) 0%, rgb(255, 255, 255, 0) 100%);
+    background-image: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(255, 255, 255, 0) 100%);
+}
+#blog-right .row-right .col-9{
+	padding-left: 0;
+}
+#form-footer .form-group .col-12{
+	padding: 0;
+}
 @media (max-width: 767px){
 	#social .col-lg-2{
 		width: 33.3%;
@@ -1281,6 +1319,7 @@ td strong{
 	}
 	.featured-image{
     	width: 33%;
+    	min-height: 85px;
 	}
 	#about-programs{
 		padding: 50px 20px 0px 20px;
@@ -1293,6 +1332,7 @@ td strong{
 	}
 	.about-market_box h2, #about-successfully h3{
 		font-size: 24px;
+		text-align: center;
 	}
 	#about-successfully, #about-market{
 		padding: 30px 20px;
@@ -1300,6 +1340,190 @@ td strong{
 	#media-banner h3, #testimonials-banner h3{
 		font-size: 48px;
 		text-align: center;
+	}
+	.product-title h2{
+		font-size: 34px;
+	}
+	#form-header h3 , #home-one h2, #home-1-mobile  h3, .blog-post h2, .feature-content h3{
+		font-size: 34px !important;
+		text-transform: capitalize !important;
+	}
+	.product-box svg{
+		height: 141px;
+	}
+	.feature-content{
+		padding: 25px 0;
+	}
+	section#home-one{
+		padding: 0 0 50px;
+	}
+	#home-one .read-more{
+		margin: auto;
+	}
+	.feature-content .wp-post-image{
+		height: auto;
+	}
+	#form-footer{
+		padding:50px 20px;
+	}
+	#form-footer .video-content-image{
+	    margin: auto;
+    	margin-bottom: 20px;
+	}
+	.form-group{
+		margin-bottom: 0;
+	}
+	#project #blog-row , #news #blog-row{
+	    height: auto;
+    	padding: 50px 0px;
+	}
+	 #news #blog-row .col-4, #project #blog-row .col-6{
+	 	width: 100%;
+	    max-width: 100%;
+	    flex: 100%;
+	    margin: auto;
+	    text-align: center;
+	 }
+	#project #blog-row h1, #news #blog-row h1{
+		font-size: 64px;
+	}
+	#news, #project{
+		background-position: left center !important;
+	}
+	.product-title h3{
+	    font-size: 34px;
+    	padding: 40px 0;
+	}
+	#thinking{
+		text-align: center;
+	}
+	#thinking .read-more{
+		margin: auto;
+	}
+	#testimonials-banner{
+		padding: 50px 0px;
+    	background-position: left;
+	}
+	#testimonials-banner .button-year{
+	    position: inherit;
+	    transform: translateX(0);
+	    left: 0;
+	    text-align: center;
+	    bottom: 0;
+	    margin: auto;
+	}
+	#testimonials-banner .button-year li{
+	    width: 50%;
+	    margin: 0;
+	    float: left;
+	    padding: 5px;
+	}
+	#testimonials-banner .button-year li a{
+		font-size: 20px;
+	    width: 100%;
+    	text-align: center;
+	}
+	#testimonials-video_all{
+		padding: 50px 0 0;
+	}
+	#testimonials-video_all .media-video-box, #testimonials-video .media-video-box, #testimonials-video-1 .media-video-box, #testimonials-video-2 .media-video-box{
+		margin-bottom: 20px;
+	}
+	#testimonials-video_all .button-year, #testimonials-video .button-year, #testimonials-video-1 .button-year, #testimonials-video-2 .button-year{
+		margin-bottom: 10px;
+	}
+	.button-year a{
+		font-size: 20px;
+	    width: 100%;
+    	text-align: center;
+	}
+	.button-year li{
+	    width: 50%;
+	    margin: 0;
+	    float: left;
+	    padding: 5px;
+	}
+	#media-banner{
+		padding: 60px 0;
+	}
+	#blog{
+		background-position: left !important;
+    	padding: 70px 0 !important;
+    	text-align: center;
+	}
+	#blog #blog-row{
+		height: auto;
+	}
+	#blog-right h1{
+		font-size: 32px;
+	}
+	#contact img{
+	    height: auto;
+	    max-width: 100%;
+	    padding: 50px 0 150px;
+	}
+	#contact-f .col-md-9{
+		padding: 0;
+	}
+	#contact-f .contact-text{
+		padding: 30px 0;
+	}
+	#contact-f .hire{
+		padding: 50px 15px;
+	}
+	#form-header .form-group{
+		margin-bottom: 10px;
+	}
+	.mb-img{
+		height: auto;
+	    max-width: 100%;
+	    border: none;
+	    -webkit-border-radius: 0;
+	    border-radius: 0;
+	    -webkit-box-shadow: none;
+	    box-shadow: none;
+	}
+	section#about{
+		padding: 0;
+	}
+	section#about .feature-content h3{
+		text-align: center;
+	}
+	section#news-mb{
+	    background-image: url(../brixey/img/pengjoon-events-header-bg.jpg);
+	    background-position: top center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+	    padding: 150px 0px 0px 0px;
+	}
+	section#blog-mb{
+		background-image: url(../brixey/img/bg-blog.jpg);
+	    background-position: left center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+	    padding: 150px 0px 0px 0px;
+	}
+	section#media-mb{
+		background-image: url(../brixey/img/bg-blog.jpg);
+	    background-position: left center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+	    padding: 150px 0px 0px 0px;
+	}
+	#news-mb, #blog-mb, #media-mb{
+		position: relative;
+	}
+	#news-mb h1, #blog-mb h1, #media-mb h1{
+	    position: absolute;
+	    top: 0;
+	    color: #fff;
+	    text-align: center;
+	    width: 100%;
+	    padding-top: 50px;
+	    font-size: 64px;
 	}
 }
 

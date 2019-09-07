@@ -9,48 +9,29 @@
         </div>
     </div>
 </section>
-<section id="about-event"></section>
-<?php if ( wp_is_mobile() ) {?>
-    <section id="about-successfully-mb">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/feature-one-mb-bg.jpg" class="mb-img" alt="">
-    </section>
-    <section id="about-successfully">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-
-                </div>
-                <div class="col-lg-6">
-                    <h3>Meet TRAN XUAN VAN ARCHITECTS</h3>
-                    <h5> Tran Xuan Van Architects  là page của  kiến trúc sư, yêu thích kinh doanh, thích khám phá bản thân và muốn giúp đỡ người khác khám phá ra khả năng tiềm ẩn trong mỗi con người.  </h5>
-                    <p> Năm 2013 đồng sáng lập VAN HIEN GROUP - Đơn vị cung cấp cá cảnh giá sỉ toàn quốc </p>
-                    <p>  Năm 2019 làm kiến trúc sư tư vấn thiết kế, setup Nhà Hàng, Coffee - phòng kinh doanh khu vực miền nam Công ty CP Nội thất Kendesign   </p>
-                    <p>    Không ngừng học hỏi từ những người thầy tuyệt vời như TS.Lê Thẩm Dương, T.Harv eker, Blair singer, AnthonyRobin và các triệu phú, tỉ phú như Donand J Trump, những diễn giả hàng đầu thế giới…  để có thêm kiến thức, phong cách sống. Tôi tin rằng: Người kinh doanh muốn sự giàu có thực sự bạn phải có mục đích lớn hơn sự giàu có. </p>
-                </div>
+<section id="about-event">
+    <img src="/wp-content/themes/brixey/img/peng-joon-img.jpg">
+</section>
+<section id="about-successfully">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
 
             </div>
-        </div>
-    </section>
-<?php } else { ?>
-    <section id="about-successfully">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-
-                </div>
-                <div class="col-lg-6">
-                    <h3>Meet TRAN XUAN VAN ARCHITECTS</h3>
-                    <h5> Tran Xuan Van Architects  là page của  kiến trúc sư, yêu thích kinh doanh, thích khám phá bản thân và muốn giúp đỡ người khác khám phá ra khả năng tiềm ẩn trong mỗi con người.  </h5>
-                    <p> Năm 2013 đồng sáng lập VAN HIEN GROUP - Đơn vị cung cấp cá cảnh giá sỉ toàn quốc </p>
-                    <p>  Năm 2019 làm kiến trúc sư tư vấn thiết kế, setup Nhà Hàng, Coffee - phòng kinh doanh khu vực miền nam Công ty CP Nội thất Kendesign   </p>
-                    <p>    Không ngừng học hỏi từ những người thầy tuyệt vời như TS.Lê Thẩm Dương, T.Harv eker, Blair singer, AnthonyRobin và các triệu phú, tỉ phú như Donand J Trump, những diễn giả hàng đầu thế giới…  để có thêm kiến thức, phong cách sống. Tôi tin rằng: Người kinh doanh muốn sự giàu có thực sự bạn phải có mục đích lớn hơn sự giàu có. </p>
-                </div>
-
+            <div class="col-lg-6">
+                <h3>Meet TRAN XUAN VAN ARCHITECTS</h3>
+                <h5> Tran Xuan Van Architects  là page của  kiến trúc sư, yêu thích kinh doanh, thích khám phá bản thân và muốn giúp đỡ người khác khám phá ra khả năng tiềm ẩn trong mỗi con người.  </h5>
+                <p> Năm 2013 đồng sáng lập VAN HIEN GROUP - Đơn vị cung cấp cá cảnh giá sỉ toàn quốc </p>
+                <p>  Năm 2019 làm kiến trúc sư tư vấn thiết kế, setup Nhà Hàng, Coffee - phòng kinh doanh khu vực miền nam Công ty CP Nội thất Kendesign   </p>
+                <p>    Không ngừng học hỏi từ những người thầy tuyệt vời như TS.Lê Thẩm Dương, T.Harv eker, Blair singer, AnthonyRobin và các triệu phú, tỉ phú như Donand J Trump, những diễn giả hàng đầu thế giới…  để có thêm kiến thức, phong cách sống. Tôi tin rằng: Người kinh doanh muốn sự giàu có thực sự bạn phải có mục đích lớn hơn sự giàu có. </p>
             </div>
+
         </div>
-    </section>
-<?php }?>
-<section id="about-event_time"></section>
+    </div>
+</section>
+<section id="about-event_time">
+    <img src="/wp-content/themes/brixey/img/peng-joon-img2.jpg">
+</section>
 <section id="about-programs">
     <div class="container">
         <div class="row">
@@ -94,7 +75,9 @@
         </div>
     </div>
 </section>
-<section id="about-famous"></section>
+<section id="about-famous">
+    <img src="/wp-content/themes/brixey/img/famous-pic-collage.jpg">
+</section>
 <section id="about-seemore">
     <div class="container">
         <div class="row">

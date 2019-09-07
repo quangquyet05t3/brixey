@@ -1,5 +1,11 @@
 <?php get_header() ?>
-<section id="media-banner">
+<?php if ( wp_is_mobile() ) {?>
+    <section id="media-mb">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/peng-contact-img.png" class="mb-img" alt="">
+            <h1>Giới Thiệu</h1>
+    </section>
+<?php } else { ?>
+    <section id="media-banner">
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
@@ -11,6 +17,8 @@
         </div>
     </div>
 </section>
+<?php }?>
+
 
 <section class="featured">
     <div class="container">
@@ -119,7 +127,9 @@
             </div>
         </div>
     </div>
-    <div class="media-poto_banner"></div>
+    <div class="media-poto_banner">
+        <img src="/wp-content/themes/brixey/img/famous-pic-collage.jpg">
+    </div>
     <div class="read-more">
         <div class="container">
             <div class="row">

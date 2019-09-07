@@ -134,13 +134,26 @@ if(!empty(get_option( 'sticky_posts' ))) {
     $the_query = new WP_Query($args);
     ?>
     <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-        <section id="home-one">
-            <?php get_template_part('template-parts/content-sticky', get_post_format()); ?>
-        </section>
+
+        <?php if ( wp_is_mobile() ) {?>
+            <section id="home-one-mb">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/feature-one-mb-bg.jpg" class="mb-img" alt="">
+            </section>
+            <section id="home-one">
+                <?php get_template_part('template-parts/content-sticky', get_post_format()); ?>
+            </section>
+        <?php } else { ?>
+            <section id="home-one">
+                <?php get_template_part('template-parts/content-sticky', get_post_format()); ?>
+            </section>
+        <?php }?>
+        
     <?php endwhile; ?>
     <?php
 }
 ?>
+
+
 
 <!----------Featured--------->
 

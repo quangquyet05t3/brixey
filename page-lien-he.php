@@ -15,7 +15,7 @@
     wp_reset_postdata();
 ?>
 <section id="contact-img">
-    
+    <img src="/wp-content/themes/brixey/img/contact-images.jpg">
 </section>
 
 <?php get_footer() ?>

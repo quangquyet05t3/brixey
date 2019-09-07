@@ -30,6 +30,7 @@ if(!empty(get_option( 'sticky_posts' ))) {
     </div>
 </section>
 <section id="about-event">
+    <img src="/wp-content/themes/brixey/img/peng-joon-img.jpg">
 </section>
 <section id="about-successfully">
 	<div class="container">
@@ -49,7 +50,8 @@ if(!empty(get_option( 'sticky_posts' ))) {
     </div>
 </section>
 <section id="about-event_time">
-</section >
+    <img src="/wp-content/themes/brixey/img/peng-joon-img2.jpg">
+</section>
 <section id="about-programs"> 
 	<div class="container">
 		<div class="row">
@@ -94,7 +96,8 @@ if(!empty(get_option( 'sticky_posts' ))) {
 	</div>
 </section>
 <section id="about-famous">
-</section >
+    <img src="/wp-content/themes/brixey/img/famous-pic-collage.jpg">  
+</section>
 <section id="about-seemore">
 	<div class="container">
 		<div class="row">

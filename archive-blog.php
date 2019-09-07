@@ -1,14 +1,22 @@
 <?php get_header() ?>
 
-<section id="blog">
-    <div class="container">
-        <div id="blog-row" class="row align-items-center">
-            <div class="col">
-                <h1>Blog</h1>
+
+<?php if ( wp_is_mobile() ) {?>
+    <section id="blog-mb">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/peng-contact-img.png" class="mb-img" alt="">
+            <h1>Blog</h1>
+    </section>
+<?php } else { ?>
+    <section id="blog">
+        <div class="container">
+            <div id="blog-row" class="row align-items-center">
+                <div class="col">
+                    <h1>Blog</h1>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+<?php }?>
 
 <section id="blog-content">
     <div class="feature-content">

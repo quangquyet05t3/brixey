@@ -1,17 +1,25 @@
 <?php get_header() ?>
-<section id="news">
-    <div class="container">
-        <div id="blog-row" class="row align-items-center">
-            <div class="col-2">
-            </div>
-            <div class="col-4">
-                <h1>Tin tức</h1>
-            </div>
-            <div class="col-6">
+
+<?php if ( wp_is_mobile() ) {?>
+    <section id="news-mb">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/peng-contact-img.png" class="mb-img" alt="">
+            <h1>Tin tức</h1>
+    </section>
+<?php } else { ?>
+    <section id="news">
+        <div class="container">
+            <div id="blog-row" class="row align-items-center">
+                <div class="col-2">
+                </div>
+                <div class="col-4">
+                    <h1>Tin tức</h1>
+                </div>
+                <div class="col-6">
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+<?php }?>
 
 <section id="thinking">
     <div class="container">
