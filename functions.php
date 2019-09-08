@@ -2,6 +2,7 @@
 
 add_theme_support( 'post-thumbnails' );
 add_image_size('blog-thumbnail',770, 310, true);
+add_image_size('blog-large',1350, 325, true);
 add_image_size('blog-medium',370, 244, true);
 add_image_size('blog-small',70, 70, true);
 add_image_size('post-small',570, 400, true);

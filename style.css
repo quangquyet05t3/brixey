@@ -1238,7 +1238,6 @@ td strong{
     word-break: break-all;
 }
 #single-post-banner-wrapper{
-	background-image: url(../brixey/img/WhatsApp_Image_2019-07-08_at_6.17.56_PM.jpeg-810x620.jpg);
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
@@ -1634,6 +1633,11 @@ td strong{
 
 .img-thumbnail {
 	border: none !important;
+}
+
+.more-link a {
+	color: white;
+	text-decoration: none;
 }
 
 

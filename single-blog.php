@@ -2,6 +2,7 @@
 
 <?php if( have_posts() ): ?>
     <?php while( have_posts() ): the_post(); ?>
+        <?php $url_blog_large = get_the_post_thumbnail_url(null, 'blog-large'); ?>
         <section id="single-post-banner-wrapper">
             <div class="container">
                 <div class="row">
@@ -78,4 +79,16 @@
     <?php endwhile; ?>
 <?php endif; ?>
 
+<style>
+    #single-post-banner-wrapper{
+        background-image: url("<?php echo $url_blog_large; ?>");
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
+        padding: 280px 18px 45px;
+        text-align: center;
+        color: #fff;
+        position: relative;
+    }
+</style>
 <?php get_footer() ?>

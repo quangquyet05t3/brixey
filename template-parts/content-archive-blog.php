@@ -9,7 +9,7 @@
     <div style="<?php echo $background; ?>" class="blog-article">
         <div class="row">
             <div class="col-lg-11">
-                <h3><?php the_title(); ?></h3>
+                <h3><a href="<?php the_permalink() ?>"> <?php the_title(); ?> </a></h3>
                 <p>
                     <?php echo wp_trim_words(get_the_content(), 35) ?>
                 </p>
@@ -20,7 +20,9 @@
                         <div class="more-link">
                             <div class="row justify-content-start">
                                 <div style="padding: 8px 0px 8px 48px;" class="col col-md-auto">
+                                    <a href="<?php the_permalink() ?>">
                                     Đọc tiếp
+                                    </a>
                                 </div>
                                 <div class="col col-md-auto">
                                     <div class="arrow icon" style="margin-top: 14px;">
