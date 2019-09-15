@@ -43,7 +43,7 @@ function submit_info() {
         'your-name' => $fullName,
         'your-email' => $email,
         'your-subject' => $phone,
-        'your-message' => 'My phone number: '.$phone
+        'your-message' => "Chào Admin, \nTôi muốn đăng ký nhận quy trình \nSố điện thoại của tôi là: ".$phone
 
     );
     $args = array(

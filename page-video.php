@@ -31,6 +31,8 @@ if( $lastBlog->have_posts() ):
 endif;
 wp_reset_postdata();
 
+/*
+
 $list_video = array();
 $current_year = date('Y', time());
 
@@ -77,6 +79,7 @@ for($i=1;$i<=2;$i++) {
         'youtube_img' => $youtube_img
     );
 }
+*/
 
 krsort($list_video);
 

@@ -203,7 +203,7 @@ if(!empty(get_option( 'sticky_posts' ))) {
             </div>
             <div class="featured-image">
                 <a href="">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo9.jpg" class="featured-foxnews size-full" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo9.png" class="featured-foxnews size-full" alt="">
                 </a>
             </div>
         </div>
