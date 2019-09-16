@@ -42,8 +42,8 @@ function submit_info() {
         '_wpcf7_container_post' => '0',
         'your-name' => $fullName,
         'your-email' => $email,
-        'your-subject' => $phone,
-        'your-message' => "Chào Admin, \nTôi muốn đăng ký nhận quy trình \nSố điện thoại của tôi là: ".$phone
+        'your-subject' => '['.$fullName.'] Nhận quy trình SETUP COFFEE từ A-Z',
+        'your-message' => "Chào Admin, Tên tôi là ".$fullName.". Tôi muốn đăng ký nhận quy trình SETUP COFFEE từ A-Z. Số điện thoại của tôi là: ".$phone."."
 
     );
     $args = array(
